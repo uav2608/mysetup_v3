@@ -1,0 +1,28 @@
+---
+- name: Install Packages
+  yum:
+      name: "{{ item }}"
+      state: present
+  loop: "{{ vagrant_packages }}"
+
+- name: enable and start libvirtd
+  systemd:
+      name: libvirtd
+      state: started
+      enabled: yes
+
+- name: Add the current user to libvirt group
+  user:
+      name: "{{ ansible_user }}"
+      groups: libvirt
+      append: yes
+
+- name: installing Vagrant
+  yum:
+      name: https://releases.hashicorp.com/vagrant/1.9.6/vagrant_1.9.6_x86_64.rpm
+      state: present
+
+- name: installing vagrant-libvirt plugin
+  become: no
+  shell: vagrant plugin install vagrant-libvirt
+

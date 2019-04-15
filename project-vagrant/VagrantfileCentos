@@ -1,0 +1,38 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+VAGRANTFILE_API_VERSION = "2"
+	
+numservers = ENV['numservers'] || "2"
+numservers = numservers.to_i
+
+servers = Hash.new
+(1..numservers).each do |i|
+    servername = "centos%02d" % i
+    octet = i + 50
+    servers[servername] = {
+      ip: "192.168.122.#{octet}"
+    }
+end
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.provider "libvirt"
+  config.vm.box = "centos/7"
+  config.vm.synced_folder ".", "/vagrant", type: "rsync"
+  config.vm.provision "shell",
+    inline: "sudo yum update && sudo yum install -y python"
+  config.vm.provision "ansible" do |ansible|
+    ansible.playbook = "playbook_centos.yaml"
+    ansible.extra_vars = {
+      servers: servers
+    }
+  end
+
+  (1..numservers).each do |i|
+      servername = "centos%02d" % i
+      config.vm.define servername do |svr|
+        svr.vm.hostname = servername
+        svr.vm.network "private_network", ip: servers [servername][:ip]
+      end
+  end 
+end
