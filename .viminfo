@@ -22,27 +22,36 @@
 # Registers:
 
 # File marks:
-'0  9  0  ~/.gitignore_global
-'1  1  0  ~/firstSetup/playbook.yaml
-'2  5  5  ~/.gitignore_global
-'3  28  15  ~/firstSetup/playbook.yaml
-'4  11  0  ~/firstSetup/roles/PeterMosmans.virtualbox-guest/defaults/main.yml
-'5  34  0  ~/firstSetup/playbook.yaml
-'6  36  0  ~/firstSetup/playbook.yaml
-'7  4  0  ~/.gitignore_global
-'8  1  0  ~/firstSetup/roles/ansible-role-virtualbox-guest/.gitignore
-'9  4  14  ~/firstSetup/roles/nextstep/handlers/main.yaml
+'0  30  0  ~/firstSetup/playbook.yaml
+'1  4  15  ~/firstSetup/roles/dev_ide/tasks/main.yml
+'2  26  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
+'3  1  0  ~/firstSetup/roles/packer_docker/vars/main.yaml
+'4  2  0  ~/firstSetup/playbook.yaml
+'5  10  6  ~/.gitignore_global
+'6  9  0  ~/.gitignore_global
+'7  1  0  ~/firstSetup/playbook.yaml
+'8  5  5  ~/.gitignore_global
+'9  28  15  ~/firstSetup/playbook.yaml
 
 # Jumplist (newest first):
+-'  30  0  ~/firstSetup/playbook.yaml
+-'  22  4  ~/firstSetup/playbook.yaml
+-'  4  15  ~/firstSetup/roles/dev_ide/tasks/main.yml
+-'  8  2  ~/firstSetup/roles/dev_ide/tasks/main.yml
+-'  26  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
+-'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
+-'  1  0  ~/firstSetup/roles/packer_docker/vars/main.yaml
+-'  2  0  ~/firstSetup/playbook.yaml
+-'  1  0  ~/firstSetup/playbook.yaml
+-'  10  6  ~/.gitignore_global
 -'  9  0  ~/.gitignore_global
 -'  5  0  ~/.gitignore_global
--'  1  0  ~/firstSetup/playbook.yaml
 -'  4  0  ~/.gitignore_global
 -'  28  0  ~/firstSetup/playbook.yaml
--'  34  0  ~/firstSetup/playbook.yaml
+-'  35  0  ~/firstSetup/playbook.yaml
 -'  11  0  ~/firstSetup/roles/PeterMosmans.virtualbox-guest/defaults/main.yml
 -'  1  0  ~/firstSetup/roles/PeterMosmans.virtualbox-guest/defaults/main.yml
--'  36  0  ~/firstSetup/playbook.yaml
+-'  37  0  ~/firstSetup/playbook.yaml
 -'  1  0  ~/.gitignore_global
 -'  1  0  ~/firstSetup/roles/ansible-role-virtualbox-guest/.gitignore
 -'  4  14  ~/firstSetup/roles/nextstep/handlers/main.yaml
@@ -123,63 +132,96 @@
 -'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
 -'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
 -'  1  0  ~/firstSetup/roles/ansible-role-virtualbox-guest/.gitignore
--'  4  14  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/playbook.yaml
 
 # History of marks within files (newest to oldest):
 
-> ~/.gitignore_global
-	"	9	0
-	^	9	0
-	.	8	0
-	+	3	5
-	+	5	6
-	+	73	0
-	+	7	0
-	+	6	5
-	+	74	8
-	+	10	0
-	+	11	12
-	+	22	0
-	+	38	0
-	+	7	0
-	+	40	6
-	+	67	0
-	+	64	0
-	+	59	0
-	+	47	0
-	+	40	0
-	+	75	17
-	+	7	5
-	+	8	0
-
 > ~/firstSetup/playbook.yaml
-	"	1	0
-	^	1	0
-	.	35	0
-	+	28	0
-	+	32	0
-	+	33	42
-	+	34	55
-	+	35	47
-	+	34	0
-	+	34	0
-	+	35	0
-	+	33	18
+	"	30	0
+	^	30	0
+	.	30	0
+	+	29	0
+	+	36	0
+	+	37	42
+	+	38	55
+	+	39	47
+	+	38	0
+	+	38	0
+	+	39	0
+	+	37	18
 	+	19	22
-	+	23	0
-	+	25	0
-	+	28	19
+	+	22	0
+	+	26	0
 	+	29	19
 	+	30	19
-	+	32	0
-	+	34	0
-	+	35	0
+	+	31	19
+	+	36	0
+	+	38	0
+	+	39	0
+	+	31	12
+	+	23	53
+	+	26	0
+	+	23	32
+	+	9	0
+	+	33	0
+	+	30	0
+	+	29	0
+	+	28	0
+	+	23	44
+	+	24	48
+	+	26	0
+	+	24	0
+	+	23	0
+	+	9	0
+	+	28	0
+	+	29	0
+	+	30	0
+
+> ~/firstSetup/roles/dev_ide/tasks/main.yml
+	"	4	15
+	^	4	16
+	.	4	16
+	+	10	0
+	+	8	15
+	+	4	16
+
+> ~/firstSetup/roles/packer_docker/tasks/main.yaml
+	"	26	0
+
+> ~/firstSetup/roles/dev_ide/vars/main.yml
+	"	5	0
+	^	5	0
+	.	4	90
+	+	4	90
+
+> ~/firstSetup/roles/packer_docker/vars/main.yaml
+	"	1	0
+
+> ~/.gitignore_global
+	"	10	6
+	^	10	7
+	.	10	0
+	+	3	5
+	+	5	6
+	+	74	0
+	+	7	0
+	+	6	5
+	+	75	8
+	+	10	0
+	+	12	12
+	+	23	0
+	+	39	0
+	+	7	0
+	+	41	6
+	+	68	0
+	+	65	0
+	+	60	0
+	+	48	0
+	+	41	0
+	+	76	17
+	+	7	5
+	+	8	0
+	+	9	7
+	+	10	0
 
 > ~/firstSetup/roles/PeterMosmans.virtualbox-guest/defaults/main.yml
 	"	11	0

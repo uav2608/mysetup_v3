@@ -15,3 +15,9 @@ ls -lah
 cd ..
 ls
 su -
+xcfe
+which xfce
+xfce
+sudo systemctl get-default
+sudo systemctl set-default graphical.target
+sudo reboot

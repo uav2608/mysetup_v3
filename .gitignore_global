@@ -6,7 +6,8 @@
 *.logs
 *.swp
 *.swo
-
+.cache/*
+.atom/*
 
 # Packages #
 ############

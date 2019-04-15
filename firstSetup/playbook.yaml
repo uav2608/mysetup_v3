@@ -19,14 +19,18 @@
     linux_desktop: xfce
   vars_files:
     - ~/firstSetup/roles/nextstep/vars/main.yaml
-    - ~/firstSetup/roles/vboxguest/vars/main.yml
     - ~/firstSetup/roles/packer_docker/vars/main.yaml
+    - ~/firstSetup/roles/dev_ide/vars/main.yml
+#    - ~/firstSetup/roles/vboxguest/vars/main.yml
 #    - ~/firstSetup/roles/vagrant_only/vars/main.yaml
 
   roles:
     - nextstep
     - packer_docker
     - linux_desktop
+    - dev_ide
+
+
 #    - vagrant_only
 #    - vboxguest
 #    - vagrant_only

@@ -1,0 +1,10 @@
+---
+# tasks file for dev_ide
+
+- name: Install Packages
+  yum:
+      name: "{{ item }}"
+      state: present
+  loop: "{{ dev_packages }}"
+
+
