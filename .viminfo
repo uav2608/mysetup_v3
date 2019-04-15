@@ -22,18 +22,20 @@
 # Registers:
 
 # File marks:
-'0  30  0  ~/firstSetup/playbook.yaml
-'1  4  15  ~/firstSetup/roles/dev_ide/tasks/main.yml
-'2  26  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
-'3  1  0  ~/firstSetup/roles/packer_docker/vars/main.yaml
-'4  2  0  ~/firstSetup/playbook.yaml
-'5  10  6  ~/.gitignore_global
-'6  9  0  ~/.gitignore_global
-'7  1  0  ~/firstSetup/playbook.yaml
-'8  5  5  ~/.gitignore_global
-'9  28  15  ~/firstSetup/playbook.yaml
+'0  11  0  ~/.gitignore_global
+'1  30  0  ~/firstSetup/playbook.yaml
+'2  4  15  ~/firstSetup/roles/dev_ide/tasks/main.yml
+'3  26  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
+'4  1  0  ~/firstSetup/roles/packer_docker/vars/main.yaml
+'5  2  0  ~/firstSetup/playbook.yaml
+'6  10  6  ~/.gitignore_global
+'7  9  0  ~/.gitignore_global
+'8  1  0  ~/firstSetup/playbook.yaml
+'9  5  5  ~/.gitignore_global
 
 # Jumplist (newest first):
+-'  11  0  ~/.gitignore_global
+-'  10  0  ~/.gitignore_global
 -'  30  0  ~/firstSetup/playbook.yaml
 -'  22  4  ~/firstSetup/playbook.yaml
 -'  4  15  ~/firstSetup/roles/dev_ide/tasks/main.yml
@@ -43,7 +45,6 @@
 -'  1  0  ~/firstSetup/roles/packer_docker/vars/main.yaml
 -'  2  0  ~/firstSetup/playbook.yaml
 -'  1  0  ~/firstSetup/playbook.yaml
--'  10  6  ~/.gitignore_global
 -'  9  0  ~/.gitignore_global
 -'  5  0  ~/.gitignore_global
 -'  4  0  ~/.gitignore_global
@@ -131,9 +132,36 @@
 -'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
 -'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
 -'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/ansible-role-virtualbox-guest/.gitignore
 
 # History of marks within files (newest to oldest):
+
+> ~/.gitignore_global
+	"	11	0
+	^	11	1
+	.	11	0
+	+	3	5
+	+	5	6
+	+	75	0
+	+	7	0
+	+	6	5
+	+	76	8
+	+	10	0
+	+	13	12
+	+	24	0
+	+	40	0
+	+	7	0
+	+	42	6
+	+	69	0
+	+	66	0
+	+	61	0
+	+	49	0
+	+	42	0
+	+	77	17
+	+	7	5
+	+	8	0
+	+	9	7
+	+	10	0
+	+	11	0
 
 > ~/firstSetup/playbook.yaml
 	"	30	0
@@ -195,33 +223,6 @@
 
 > ~/firstSetup/roles/packer_docker/vars/main.yaml
 	"	1	0
-
-> ~/.gitignore_global
-	"	10	6
-	^	10	7
-	.	10	0
-	+	3	5
-	+	5	6
-	+	74	0
-	+	7	0
-	+	6	5
-	+	75	8
-	+	10	0
-	+	12	12
-	+	23	0
-	+	39	0
-	+	7	0
-	+	41	6
-	+	68	0
-	+	65	0
-	+	60	0
-	+	48	0
-	+	41	0
-	+	76	17
-	+	7	5
-	+	8	0
-	+	9	7
-	+	10	0
 
 > ~/firstSetup/roles/PeterMosmans.virtualbox-guest/defaults/main.yml
 	"	11	0
