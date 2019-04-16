@@ -1,0 +1,5 @@
+---
+# vars file for atom-packages
+
+atom_packages: [ "autocomplete-plus", "highlight-selected", "pigments", "color-picker", "minimap", "atom-beautify", "linter", "atom-alignment", "git-plus", "sync-settings", "file-icons", "emmet", "autoclose-html", "linter-csslint", "script", "linter-flake8", "linter-pydocstyle" ]
+

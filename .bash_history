@@ -21,3 +21,20 @@ xfce
 sudo systemctl get-default
 sudo systemctl set-default graphical.target
 sudo reboot
+atom
+exit
+git status
+ping 8.8.8.8
+git push origin master
+atom
+export DISPLAY=:0
+stom
+atom
+sudo vim /etc/ssh/sshd_config 
+export DISPLAY='IP:0.0'
+atom
+export DISPLAY="127.0.0.1:10.0"
+atom
+exit
+atom
+exit
