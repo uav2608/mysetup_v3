@@ -8,9 +8,9 @@
 # hlsearch on (H) or off (h):
 ~H
 # Command Line History (newest to oldest):
+:wq
 :q!
 :set number
-:wq
 
 # Search String History (newest to oldest):
 
@@ -31,18 +31,20 @@
 	#      docker_network:
 
 # File marks:
-'0  1  0  ~/.gitignore_global
-'1  1  0  ~/newgit/.gitignore_global
-'2  1  28  ~/project-python/modules1/index.py
-'3  4  0  ~/project-python/modules1/docker-compose.yaml
-'4  1  0  ~/project-python/modules/playbook-docker-deploy1.yaml
-'5  1  0  ~/project-python/modules/playbook-docker-deploy.yaml
-'6  11  0  ~/firstSetup/playbook_dev.yaml
-'7  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
-'8  40  0  ~/project-python/modules/packer2.json
-'9  22  4  ~/project-python/modules/packer2.json
+'0  2  32  ~/.gitconfig
+'1  1  0  ~/.gitignore_global
+'2  1  0  ~/newgit/.gitignore_global
+'3  1  28  ~/project-python/modules1/index.py
+'4  4  0  ~/project-python/modules1/docker-compose.yaml
+'5  1  0  ~/project-python/modules/playbook-docker-deploy1.yaml
+'6  1  0  ~/project-python/modules/playbook-docker-deploy.yaml
+'7  11  0  ~/firstSetup/playbook_dev.yaml
+'8  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
+'9  40  0  ~/project-python/modules/packer2.json
 
 # Jumplist (newest first):
+-'  2  32  ~/.gitconfig
+-'  1  0  ~/.gitconfig
 -'  1  0  ~/.gitignore_global
 -'  1  0  ~/newgit/.gitignore_global
 -'  1  28  ~/project-python/modules1/index.py
@@ -140,9 +142,14 @@
 -'  11  0  ~/firstSetup/playbook_dev.yaml
 -'  1  0  ~/firstSetup/playbook_dev.yaml
 -'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
 
 # History of marks within files (newest to oldest):
+
+> ~/.gitconfig
+	"	2	32
+	^	2	33
+	.	2	32
+	+	2	32
 
 > ~/.gitignore_global
 	"	1	0
