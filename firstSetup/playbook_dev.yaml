@@ -8,6 +8,6 @@
     - ~/firstSetup/roles/atom_packages/vars/main.yml
 
   roles:
-#    - dev_ide
+    - dev_ide
     - atom_packages
 

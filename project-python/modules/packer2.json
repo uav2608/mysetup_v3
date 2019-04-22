@@ -10,14 +10,13 @@
           "-i",
           "-t",
           "--name",
-          "uav2608.flask.v1",
+          "uav2608.flask",
           "{{.Image}}",
           "/bin/bash"
       ],
       "changes": [
           "WORKDIR /app", 
-          "EXPOSE 4000",
-          "ENTRYPOINT [\"python\",\"index.py\"]"
+          "EXPOSE 4000"
       ]
     }
    ],
@@ -33,8 +32,8 @@
   "post-processors": [
     {
       "type": "docker-tag",
-      "repository": "uav2608.flask.v1",
-      "tag":"0.0.3"
+      "repository": "uav2608.flask",
+      "tag":"0.0.4"
     }
    ]
 }

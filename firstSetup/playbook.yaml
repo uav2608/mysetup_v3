@@ -6,7 +6,7 @@
   become_method: su
   become_user: root
   roles:
-#    - firstsetup
+    - firstsetup
 
 
 - hosts: 127.0.0.1
@@ -21,14 +21,14 @@
     - ~/firstSetup/roles/nextstep/vars/main.yaml
     - ~/firstSetup/roles/packer_docker/vars/main.yaml
 #    - ~/firstSetup/roles/vboxguest/vars/main.yml
-#    - ~/firstSetup/roles/vagrant_only/vars/main.yaml
+    - ~/firstSetup/roles/vagrant_only/vars/main.yaml
 
   roles:
-#    - nextstep
+    - nextstep
     - packer_docker
-#    - linux_desktop
+    - linux_desktop
+    - vagrant_only
 
-#    - vagrant_only
 #    - vboxguest
 #    - vagrant_only
 #    - role: PeterMosmans.virtualbox-guest 

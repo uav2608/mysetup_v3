@@ -1,0 +1,25 @@
+/usr/bin/startxfce4: X server already running on display :0
+generating cookie with syscall
+generating cookie with syscall
+generating cookie with syscall
+generating cookie with syscall
+xfce4-session-Message: 08:25:51.135: SSH authentication agent is already running
+gpg-agent[15314]: directory `/home/ansibleuser1/.gnupg' created
+gpg-agent[15314]: directory `/home/ansibleuser1/.gnupg/private-keys-v1.d' created
+gpg-agent[15315]: gpg-agent (GnuPG) 2.0.22 started
+
+(xfce4-session:15307): xfce4-session-WARNING **: 08:25:51.194: xfsm_manager_load_session: Something wrong with /home/ansibleuser1/.cache/sessions/xfce4-session-localhost.test:0, Does it exist? Permissions issue?
+
+(xfsettingsd:15333): GLib-CRITICAL **: 08:25:52.057: g_str_has_prefix: assertion 'prefix != NULL' failed
+
+(xfsettingsd:15333): GLib-GObject-CRITICAL **: 08:25:52.059: g_value_get_string: assertion 'G_VALUE_HOLDS_STRING (value)' failed
+
+(xfsettingsd:15333): GLib-GObject-CRITICAL **: 08:25:52.063: g_value_get_string: assertion 'G_VALUE_HOLDS_STRING (value)' failed
+
+(xfwm4:15317): GLib-CRITICAL **: 08:25:53.185: g_str_has_prefix: assertion 'prefix != NULL' failed
+
+(xfwm4:15317): xfwm4-WARNING **: 08:25:53.269: The property '/general/double_click_distance' of type int is not supported
+
+(xfdesktop:15325): GLib-GObject-CRITICAL **: 08:25:53.471: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+
+(xfwm4:15317): xfwm4-WARNING **: 08:25:54.218: Another compositing manager is running on screen 0
