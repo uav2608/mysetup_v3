@@ -10,6 +10,8 @@
 # Command Line History (newest to oldest):
 :wq
 :q!
+:set number
+:q1
 
 # Search String History (newest to oldest):
 
@@ -23,275 +25,294 @@
 ""1	LINE	0
 	
 "2	LINE	0
-	    - dev_ide
+	        state: latest
 "3	LINE	0
-	    - ~/firstSetup/roles/dev_ide/vars/main.yml
+	        name: "*"
 "4	LINE	0
-	
+	      yum:
 "5	LINE	0
-	#      when: ansible_virtualization_type == "VMware"
+	    - name: update the system
 "6	LINE	0
-	#    - role: ruzickap.vmwaretools
+	
 "7	LINE	0
-	#    - role: PeterMosmans.virtualbox-guest 
+	        enabled: no
 "8	LINE	0
-	#    - vagrant_only
+	        mirrorlist: http://mirrorlist.repoforge.org/el7/mirrors-rpmforge
 "9	LINE	0
-	#    - vboxguest
+	        baseurl: http://apt.sw.be/redhat/el7/en/$basearch/rpmforge
+"-	CHAR	0
+	 
 
 # File marks:
-'0  4  277  ~/firstSetup/roles/atom_packages/vars/main.yml
-'1  11  0  ~/firstSetup/playbook_dev.yaml
-'2  5  5  ~/firstSetup/roles/atom_packages/tasks/main.yml
-'3  8  4  ~/firstSetup/playbook_dev.yaml
-'4  1  0  ~/firstSetup/roles/atom_packages/tasks/main.yml
-'5  1  0  ~/firstSetup/roles/atom_packages/vars/main.yml
-'6  1  0  ~/firstSetup/roles/atom_packages/defaults/main.yml
-'7  2  0  ~/firstSetup/playbook.yaml
-'8  1  0  ~/firstSetup/playbook
-'9  12  18  ~/firstSetup/playbook_dev.yaml
+'0  40  0  ~/project-python/modules/playbook-docker-deploy.yaml
+'1  41  0  ~/project-python/modules/playbook-docker-deploy.yaml
+'2  15  14  ~/project-python/modules1/docker-compose.yaml
+'3  6  31  ~/project-python/modules1/Dockerfile
+'4  6  11  ~/project-python/modules/playbook.yaml
+'5  7  29  ~/project-python/modules/playbook.yaml
+'6  28  8  ~/project-python/modules/packer2.json
+'7  1  0  ~/project-python/modules/playbook.yaml
+'8  41  0  ~/project-python/modules/packer2.json
+'9  18  0  ~/project-python/modules/playbook.yaml
 
 # Jumplist (newest first):
--'  4  277  ~/firstSetup/roles/atom_packages/vars/main.yml
--'  11  0  ~/firstSetup/playbook_dev.yaml
--'  8  4  ~/firstSetup/playbook_dev.yaml
--'  5  5  ~/firstSetup/roles/atom_packages/tasks/main.yml
--'  1  0  ~/firstSetup/roles/atom_packages/tasks/main.yml
--'  12  4  ~/firstSetup/playbook_dev.yaml
--'  1  0  ~/firstSetup/roles/atom_packages/vars/main.yml
--'  1  0  ~/firstSetup/roles/atom_packages/defaults/main.yml
--'  2  0  ~/firstSetup/playbook.yaml
--'  29  4  ~/firstSetup/playbook.yaml
--'  1  0  ~/firstSetup/playbook
--'  1  0  ~/firstSetup/playbook_dev.yaml
--'  11  0  ~/.gitignore_global
--'  10  0  ~/.gitignore_global
--'  22  4  ~/firstSetup/playbook.yaml
--'  4  15  ~/firstSetup/roles/dev_ide/tasks/main.yml
--'  8  2  ~/firstSetup/roles/dev_ide/tasks/main.yml
--'  26  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/packer_docker/vars/main.yaml
--'  1  0  ~/firstSetup/playbook.yaml
--'  9  0  ~/.gitignore_global
--'  5  0  ~/.gitignore_global
--'  4  0  ~/.gitignore_global
--'  27  0  ~/firstSetup/playbook.yaml
--'  32  0  ~/firstSetup/playbook.yaml
--'  11  0  ~/firstSetup/roles/PeterMosmans.virtualbox-guest/defaults/main.yml
--'  1  0  ~/firstSetup/roles/PeterMosmans.virtualbox-guest/defaults/main.yml
--'  34  0  ~/firstSetup/playbook.yaml
--'  1  0  ~/.gitignore_global
--'  1  0  ~/firstSetup/roles/ansible-role-virtualbox-guest/.gitignore
--'  4  14  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  4  14  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/ansible-role-virtualbox-guest/.gitignore
--'  4  14  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  4  14  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/ansible-role-virtualbox-guest/.gitignore
--'  4  14  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  4  14  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/ansible-role-virtualbox-guest/.gitignore
--'  4  14  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  4  14  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/ansible-role-virtualbox-guest/.gitignore
--'  4  14  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  4  14  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/handlers/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  48  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/nextstep/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/ansible-role-virtualbox-guest/.gitignore
--'  4  14  ~/firstSetup/roles/nextstep/handlers/main.yaml
+-'  40  0  ~/project-python/modules/playbook-docker-deploy.yaml
+-'  41  0  ~/project-python/modules/playbook-docker-deploy.yaml
+-'  15  8  ~/project-python/modules/playbook-docker-deploy.yaml
+-'  15  14  ~/project-python/modules1/docker-compose.yaml
+-'  1  0  ~/project-python/modules1/docker-compose.yaml
+-'  6  31  ~/project-python/modules1/Dockerfile
+-'  1  0  ~/project-python/modules1/Dockerfile
+-'  6  11  ~/project-python/modules/playbook.yaml
+-'  7  4  ~/project-python/modules/playbook.yaml
+-'  1  0  ~/project-python/modules/playbook.yaml
+-'  28  8  ~/project-python/modules/packer2.json
+-'  41  0  ~/project-python/modules/packer2.json
+-'  30  4  ~/project-python/modules/packer2.json
+-'  18  8  ~/project-python/modules/playbook.yaml
+-'  3  2  ~/project-python/modules/playbook.yaml
+-'  26  8  ~/project-python/modules/packer2.json
+-'  20  8  ~/project-python/modules/playbook.yaml
+-'  23  4  ~/project-python/modules/playbook.yaml
+-'  28  0  ~/project-python/modules/playbook.yaml
+-'  6  6  ~/project-python/modules/packer2.json
+-'  1  0  ~/project-python/modules/packer2.json
+-'  1  0  ~/project-python/modules/packer1.json
+-'  26  6  ~/project-python/modules/packer1.json
+-'  23  0  ~/project-python/modules/packer.json
+-'  10  9  ~/project-python/modules/packer.json
+-'  32  4  ~/project-python/modules/packer1.json
+-'  31  0  ~/project-python/modules/packer1.json
+-'  28  8  ~/project-python/modules/packer1.json
+-'  12  10  ~/project-python/modules/packer1.json
+-'  18  10  ~/project-python/modules/packer1.json
+-'  19  6  ~/project-python/modules/packer1.json
+-'  35  6  ~/project-python/modules/packer1.json
+-'  17  10  ~/project-python/modules/packer1.json
+-'  27  7  ~/project-python/modules/playbook.yaml
+-'  1  0  ~/project-python/modules/playbook-docker-deploy.yaml
+-'  32  8  ~/project-python/modules/playbook.yaml
+-'  9  2  ~/project-python/modules/playbook.yaml
+-'  1  0  ~/project-python/modules/playbook
+-'  1  0  ~/project-python/modules/packer.json
+-'  33  22  ~/project-python/modules/packer1.json
+-'  34  14  ~/project-python/modules/packer1.json
+-'  1  0  ~/project-python/modules/playbook
+-'  1  0  ~/project-python/modules/playbook
+-'  1  0  ~/project-python/modules/playbook
+-'  23  0  ~/project-python/modules/packer.json
+-'  10  9  ~/project-python/modules/packer.json
+-'  1  0  ~/project-python/modules/playbook
+-'  1  0  ~/project-python/modules/packer.json
+-'  1  0  ~/project-python/modules/playbook
+-'  1  0  ~/project-python/modules/playbook
+-'  1  0  ~/project-python/modules/playbook
+-'  1  0  ~/project-python/modules/packer1.json
+-'  26  6  ~/project-python/modules/packer1.json
+-'  23  0  ~/project-python/modules/packer.json
+-'  10  9  ~/project-python/modules/packer.json
+-'  32  4  ~/project-python/modules/packer1.json
+-'  31  0  ~/project-python/modules/packer1.json
+-'  28  8  ~/project-python/modules/packer1.json
+-'  12  10  ~/project-python/modules/packer1.json
+-'  18  10  ~/project-python/modules/packer1.json
+-'  19  6  ~/project-python/modules/packer1.json
+-'  35  6  ~/project-python/modules/packer1.json
+-'  17  10  ~/project-python/modules/packer1.json
+-'  1  0  ~/project-python/modules/playbook
+-'  1  0  ~/project-python/modules/packer.json
+-'  33  22  ~/project-python/modules/packer1.json
+-'  34  14  ~/project-python/modules/packer1.json
+-'  1  0  ~/project-python/modules/playbook
+-'  1  0  ~/project-python/modules/playbook
+-'  1  0  ~/project-python/modules/playbook
+-'  23  0  ~/project-python/modules/packer.json
+-'  10  9  ~/project-python/modules/packer.json
+-'  1  0  ~/project-python/modules/packer1.json
+-'  26  6  ~/project-python/modules/packer1.json
+-'  23  0  ~/project-python/modules/packer.json
+-'  10  9  ~/project-python/modules/packer.json
+-'  32  4  ~/project-python/modules/packer1.json
+-'  31  0  ~/project-python/modules/packer1.json
+-'  28  8  ~/project-python/modules/packer1.json
+-'  12  10  ~/project-python/modules/packer1.json
+-'  18  10  ~/project-python/modules/packer1.json
+-'  19  6  ~/project-python/modules/packer1.json
+-'  35  6  ~/project-python/modules/packer1.json
+-'  17  10  ~/project-python/modules/packer1.json
+-'  1  0  ~/project-python/modules/playbook
+-'  1  0  ~/project-python/modules/packer.json
+-'  33  22  ~/project-python/modules/packer1.json
+-'  43  0  ~/project-python/modules/playbook-docker-deploy.yaml
+-'  15  14  ~/project-python/modules1/docker-compose.yaml
+-'  1  0  ~/project-python/modules1/docker-compose.yaml
+-'  6  31  ~/project-python/modules1/Dockerfile
+-'  1  0  ~/project-python/modules1/Dockerfile
+-'  6  11  ~/project-python/modules/playbook.yaml
+-'  7  4  ~/project-python/modules/playbook.yaml
+-'  1  0  ~/project-python/modules/playbook.yaml
+-'  28  8  ~/project-python/modules/packer2.json
+-'  41  0  ~/project-python/modules/packer2.json
 
 # History of marks within files (newest to oldest):
 
-> ~/firstSetup/roles/atom_packages/vars/main.yml
-	"	4	277
-	^	4	278
-	.	4	278
-	+	5	0
-	+	4	324
-	+	4	72
-	+	4	241
-	+	4	156
-	+	4	278
+> ~/project-python/modules/playbook-docker-deploy.yaml
+	"	40	0
+	^	40	0
+	.	39	0
+	+	23	42
+	+	20	0
+	+	36	0
+	+	37	0
+	+	38	0
+	+	39	0
 
-> ~/firstSetup/playbook_dev.yaml
-	"	11	0
-	^	11	1
-	.	11	0
-	+	2	0
+> ~/project-python/modules1/docker-compose.yaml
+	"	15	14
+	^	15	15
+	.	15	0
+	+	15	0
+
+> ~/project-python/modules1/Dockerfile
+	"	6	31
+	^	6	32
+	.	6	0
 	+	6	0
-	+	7	0
-	+	8	0
-	+	11	0
-	+	13	0
-	+	12	18
-	+	8	8
-	+	11	0
 
-> ~/firstSetup/roles/atom_packages/tasks/main.yml
-	"	5	5
-	^	5	6
-	.	5	6
-	+	5	6
-
-> ~/firstSetup/roles/atom_packages/defaults/main.yml
-	"	1	0
-
-> ~/firstSetup/playbook.yaml
-	"	2	0
-	^	29	0
-	.	31	0
-	+	28	0
+> ~/project-python/modules/playbook.yaml
+	"	6	11
+	^	6	12
+	.	6	11
+	+	30	7
 	+	33	0
-	+	34	42
-	+	35	55
-	+	36	47
-	+	35	0
-	+	35	0
-	+	36	0
-	+	34	18
-	+	19	22
+	+	32	17
+	+	10	40
+	+	30	20
+	+	31	18
+	+	33	0
+	+	31	17
+	+	28	0
+	+	27	7
+	+	24	10
+	+	25	26
+	+	27	10
 	+	22	0
-	+	25	0
-	+	28	19
-	+	29	19
-	+	30	19
-	+	33	0
-	+	35	0
-	+	36	0
-	+	30	12
-	+	23	53
-	+	25	0
-	+	23	32
-	+	9	0
-	+	31	0
-	+	29	0
-	+	28	0
+	+	21	21
+	+	20	20
+	+	3	0
+	+	18	0
+	+	10	25
+	+	18	0
+	+	10	5
+	+	18	6
+	+	10	6
+	+	18	6
+	+	18	7
+	+	18	7
+	+	10	0
+	+	18	0
+	+	18	0
+	+	18	17
+	+	10	3
+	+	11	5
+	+	12	7
+	+	13	7
+	+	14	7
+	+	15	7
+	+	16	7
+	+	18	3
+	+	18	5
+	+	18	7
+	+	18	7
+	+	18	7
+	+	18	7
+	+	18	7
+	+	18	7
+	+	18	0
+	+	10	31
+	+	18	0
+	+	26	27
 	+	27	0
-	+	23	44
-	+	23	48
-	+	25	0
-	+	23	0
-	+	23	0
-	+	9	0
-	+	27	0
-	+	28	0
 	+	29	0
-	+	23	0
+	+	7	0
+	+	6	10
+	+	7	29
+	+	6	11
+
+> ~/project-python/modules/packer2.json
+	"	28	8
+	^	28	9
+	.	28	8
+	+	6	22
+	+	15	17
+	+	27	0
+	+	26	5
+	+	26	23
+	+	26	42
+	+	26	23
+	+	26	8
+	+	26	15
+	+	26	2
+	+	12	0
+	+	14	1
+	+	12	19
+	+	13	17
+	+	37	17
 	+	30	0
-	+	31	0
+	+	28	8
 
-> ~/firstSetup/playbook
+> ~/project-python/modules/group_vars/main.yaml
+	"	4	19
+	^	4	20
+	.	4	4
+	+	2	13
+	+	4	4
+
+> ~/project-python/modules/packer1.json
 	"	1	0
-
-> ~/.gitignore_global
-	"	11	0
-	^	11	1
-	.	11	0
-	+	3	5
-	+	5	6
-	+	75	0
-	+	7	0
-	+	6	5
-	+	76	8
-	+	10	0
-	+	13	12
-	+	24	0
-	+	40	0
-	+	7	0
-	+	42	6
-	+	69	0
-	+	66	0
-	+	61	0
-	+	49	0
-	+	42	0
-	+	77	17
-	+	7	5
-	+	8	0
+	^	26	5
+	.	28	0
+	+	8	19
+	+	16	26
+	+	17	21
+	+	31	14
+	+	18	44
+	+	17	23
+	+	8	18
+	+	32	18
+	+	19	0
+	+	18	48
+	+	8	16
+	+	14	0
+	+	8	5
 	+	9	7
-	+	10	0
-	+	11	0
+	+	10	8
+	+	11	8
+	+	12	8
+	+	12	16
+	+	12	17
+	+	13	16
+	+	13	0
+	+	16	0
+	+	14	7
+	+	20	0
+	+	18	48
+	+	12	8
+	+	23	19
+	+	27	0
+	+	25	25
+	+	27	12
+	+	27	12
+	+	28	0
+	+	28	0
+	+	28	0
+	+	28	0
+	+	26	0
+	+	26	105
+	+	28	0
 
-> ~/firstSetup/roles/dev_ide/tasks/main.yml
-	"	4	15
-	^	4	16
-	.	4	16
-	+	10	0
-	+	8	15
-	+	4	16
+> ~/project-python/modules/packer.json
+	"	23	0
 
-> ~/firstSetup/roles/packer_docker/tasks/main.yaml
-	"	26	0
-
-> ~/firstSetup/roles/dev_ide/vars/main.yml
-	"	5	0
-	^	5	0
-	.	4	90
-	+	4	90
-
-> ~/firstSetup/roles/packer_docker/vars/main.yaml
+> ~/project-python/modules/playbook
 	"	1	0
-
-> ~/firstSetup/roles/PeterMosmans.virtualbox-guest/defaults/main.yml
-	"	11	0
-
-> ~/firstSetup/roles/ansible-role-virtualbox-guest/.gitignore
-	"	1	0
-
-> ~/firstSetup/roles/nextstep/handlers/main.yaml
-	"	4	14
-	^	4	15
-	.	4	14
-	+	4	14
-
-> ~/firstSetup/roles/nextstep/tasks/main.yaml
-	"	48	0

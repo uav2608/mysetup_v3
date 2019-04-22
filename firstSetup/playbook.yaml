@@ -6,7 +6,7 @@
   become_method: su
   become_user: root
   roles:
-    - firstsetup
+#    - firstsetup
 
 
 - hosts: 127.0.0.1
@@ -24,9 +24,9 @@
 #    - ~/firstSetup/roles/vagrant_only/vars/main.yaml
 
   roles:
-    - nextstep
+#    - nextstep
     - packer_docker
-    - linux_desktop
+#    - linux_desktop
 
 #    - vagrant_only
 #    - vboxguest

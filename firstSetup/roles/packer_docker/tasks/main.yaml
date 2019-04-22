@@ -22,7 +22,10 @@
 
 - name: installing Docker
   pip:
-      name: docker-py
+      name: "{{ item }}"
+  loop:
+    - docker
+    - docker-compose 
 
 - name: Install Docker Packages
   yum:
