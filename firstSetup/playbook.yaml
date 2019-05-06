@@ -21,13 +21,15 @@
     - ~/firstSetup/roles/nextstep/vars/main.yaml
     - ~/firstSetup/roles/packer_docker/vars/main.yaml
 #    - ~/firstSetup/roles/vboxguest/vars/main.yml
-    - ~/firstSetup/roles/vagrant_only/vars/main.yaml
+    - ~/firstSetup/roles/vagrant/vars/main.yaml
 
   roles:
     - nextstep
     - packer_docker
     - linux_desktop
-    - vagrant_only
+    - vagrant
+    - kvm   
+#    - vb
 
 #    - vboxguest
 #    - vagrant_only

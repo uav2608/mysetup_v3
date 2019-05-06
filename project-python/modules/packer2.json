@@ -16,7 +16,8 @@
       ],
       "changes": [
           "WORKDIR /app", 
-          "EXPOSE 4000"
+          "EXPOSE 4000",
+          "ENTRYPOINT [\"python\",\"index.py\"]"
       ]
     }
    ],

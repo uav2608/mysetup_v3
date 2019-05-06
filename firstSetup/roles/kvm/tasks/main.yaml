@@ -1,0 +1,34 @@
+---
+- name: Install Packages
+  yum:
+      name: "{{ item }}"
+      state: present
+  loop: "{{ kvm_packages1 }}"
+
+- name: enable and start libvirtd
+  systemd:
+      name: libvirtd
+      state: started
+      enabled: yes
+
+- name: Add the current user to libvirt group
+  user:
+      name: "{{ ansible_user }}"
+      groups: libvirt
+      append: yes
+
+- name: Create folder for ISO
+  become: no
+  file:
+      path: ~/ISO
+      state: directory
+      mode: 0755
+      owner: "{{ ansible_user }}"
+
+- name: Download images
+  become: no
+  get_url: 
+      url: "{{ item }}"
+      dest: ~/ISO/
+  loop: "{{ kvm_packages2 }}" 
+

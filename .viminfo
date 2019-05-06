@@ -11,6 +11,8 @@
 :wq
 :q!
 :set number
+:WQ
+:ew
 
 # Search String History (newest to oldest):
 
@@ -22,149 +24,641 @@
 
 # Registers:
 ""1	LINE	0
-	#        name: dev_app
+	
 "2	LINE	0
-	#      docker_volume:
+	  end
 "3	LINE	0
-	#        name: web_dev
+	    ansible.playbook = "playbook_kali.yaml"
 "4	LINE	0
-	#      docker_network:
+	  config.vm.provision "ansible" do |ansible|
+"5	LINE	0
+	    inline: "sudo apt-get update && sudo apt install -y python"
+"6	LINE	0
+	  config.vm.provision "shell",
+"7	LINE	0
+	  config.vm.network "private_network", ip: "192.168.122.250"
+"8	LINE	0
+	  config.vm.hostname = "kali"
+"9	LINE	0
+	  config.vm.synced_folder ".", "/vagrant", type: "rsync"
+"-	CHAR	0
+	\
 
 # File marks:
-'0  2  32  ~/.gitconfig
-'1  1  0  ~/.gitignore_global
-'2  1  0  ~/newgit/.gitignore_global
-'3  1  28  ~/project-python/modules1/index.py
-'4  4  0  ~/project-python/modules1/docker-compose.yaml
-'5  1  0  ~/project-python/modules/playbook-docker-deploy1.yaml
-'6  1  0  ~/project-python/modules/playbook-docker-deploy.yaml
-'7  11  0  ~/firstSetup/playbook_dev.yaml
-'8  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
-'9  40  0  ~/project-python/modules/packer2.json
+'0  17  30  ~/.gitignore_global
+'1  1  0  ~/firstSetup/playbook.yaml
+'2  2  5  ~/firstSetup/roles/kvm/vars/main.yaml
+'3  1  0  /var/spool/mail
+'4  22  6  ~/project-kali/deploykali.sh
+'5  18  0  ~/project-kali/deploykali.sh
+'6  16  0  ~/project-kali/deploykali.sh
+'7  17  14  ~/firstSetup/roles/kvm/vars/main.yaml
+'8  30  12  ~/project-kali/deploykali.sh
+'9  16  0  ~/project-kali/deploykali.sh
 
 # Jumplist (newest first):
+-'  17  30  ~/.gitignore_global
+-'  13  0  ~/.gitignore_global
+-'  1  0  ~/firstSetup/playbook.yaml
+-'  30  0  ~/firstSetup/playbook.yaml
+-'  2  5  ~/firstSetup/roles/kvm/vars/main.yaml
+-'  17  0  ~/firstSetup/roles/kvm/vars/main.yaml
+-'  1  0  /var/spool/mail
+-'  22  6  ~/project-kali/deploykali.sh
+-'  18  0  ~/project-kali/deploykali.sh
+-'  16  0  ~/project-kali/deploykali.sh
+-'  30  0  ~/project-kali/deploykali.sh
+-'  3  0  ~/firstSetup/roles/kvm/vars/main.yaml
+-'  5  0  ~/project-kali/deploykali.sh
+-'  13  0  ~/project-kali/deploykali.sh
+-'  14  0  ~/project-kali/deploykali.sh
+-'  23  0  ~/project-kali/deploykali.sh
+-'  1  0  ~/project-kali/deploykali.sh
+-'  70  0  ~/project-vagrant/Vagrantfile
+-'  72  0  ~/project-vagrant/Vagrantfile
+-'  1  0  ~/.vagrant.d/setup_version
+-'  27  0  ~/firstSetup/roles/kvm/tasks/main.yaml
+-'  29  2  ~/firstSetup/roles/kvm/tasks/main.yaml
+-'  39  0  ~/firstSetup/playbook.yaml
+-'  19  0  ~/firstSetup/roles/kvm/vars/main.yaml
+-'  31  0  ~/firstSetup/playbook.yaml
+-'  1  0  ~/firstSetup/roles/kvm/tasks/main.yaml
+-'  1  0  ~/.gitignore_global
+-'  39  8  ~/project-vagrant/Vagrantfile
+-'  71  10  ~/project-vagrant/Vagrantfile
+-'  47  0  ~/project-vagrant-vb/Vagrantfile
+-'  70  2  ~/project-vagrant-vb/Vagrantfile
+-'  1  0  ~/project-vagrant-vb/Vagrantfile
+-'  1  0  ~/project-vagrant/Vagrantfile
+-'  2  2  ~/project-vagrant/Vagrantfile_vb
+-'  13  2  ~/project-vagrant/Vagrantfile_vb
+-'  19  2  ~/project-vagrant/Vagrantfile_vb
+-'  20  2  ~/project-vagrant/Vagrantfile_vb
+-'  24  24  ~/firstSetup/roles/vb/tasks/main.yaml
+-'  22  0  ~/firstSetup/roles/vb/tasks/main.yaml
+-'  20  6  ~/firstSetup/roles/vb/tasks/main.yaml
+-'  13  4  ~/firstSetup/roles/vb/tasks/main.yaml
+-'  14  1  ~/firstSetup/roles/vb/tasks/main.yaml
+-'  3  0  ~/firstSetup/roles/vb/vars/main.yaml
+-'  1  0  ~/firstSetup/roles/vb/vars/main.yaml
+-'  1  0  ~/firstSetup/roles/vb/tasks/main.yaml
+-'  28  0  ~/firstSetup/roles/vagrant_only/tasks/main.yaml
+-'  1  0  ~/firstSetup/roles/vagrant_only/tasks/main.yaml
+-'  6  0  ~/firstSetup/playbook_dev.yaml
+-'  7  4  ~/firstSetup/playbook_dev.yaml
+-'  17  21  ~/project-python/modules/playbook-docker-deploy.yaml
+-'  16  8  ~/project-python/modules/playbook-docker-deploy.yaml
+-'  39  0  ~/project-python/modules/packer2.json
+-'  20  10  ~/project-python/modules/packer2.json
+-'  41  0  ~/project-python/modules/packer2.json
+-'  34  0  ~/project-python/modules/playbook-docker-deploy.yaml
+-'  22  12  ~/project-python/modules/playbook-docker-deploy.yaml
+-'  31  14  ~/project-python/modules/playbook-docker-deploy.yaml
+-'  44  10  ~/project-python/modules/playbook-docker-deploy.yaml
+-'  4  2  ~/project-python/modules/playbook-docker-deploy.yaml
+-'  29  16  ~/project-python/modules/playbook-docker-deploy.yaml
+-'  47  0  ~/project-python/modules/playbook-docker-deploy.yaml
+-'  30  14  ~/project-python/modules/playbook-docker-deploy.yaml
+-'  46  0  ~/project-python/modules/playbook-docker-deploy.yaml
+-'  26  12  ~/project-python/modules/playbook-docker-deploy1.yaml
+-'  18  12  ~/project-python/modules/playbook-docker-deploy1.yaml
+-'  46  36  ~/project-python/modules/flask/index.py
+-'  1  0  ~/project-python/modules/flask/index.py
+-'  1  0  ~/project-python/modules/playbook.yaml
+-'  1  0  ~/project-python/modules/playbook-docker-deploy.yaml
 -'  2  32  ~/.gitconfig
 -'  1  0  ~/.gitconfig
--'  1  0  ~/.gitignore_global
 -'  1  0  ~/newgit/.gitignore_global
 -'  1  28  ~/project-python/modules1/index.py
 -'  4  0  ~/project-python/modules1/docker-compose.yaml
 -'  1  0  ~/project-python/modules1/docker-compose.yaml
 -'  1  0  ~/project-python/modules/playbook-docker-deploy1.yaml
--'  1  0  ~/project-python/modules/playbook-docker-deploy.yaml
--'  11  0  ~/firstSetup/playbook_dev.yaml
 -'  1  0  ~/firstSetup/playbook_dev.yaml
 -'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
 -'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
 -'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
 -'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  11  0  ~/firstSetup/playbook_dev.yaml
--'  1  0  ~/firstSetup/playbook_dev.yaml
 -'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
 -'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
 -'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
 -'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/project-python/modules/playbook-docker-deploy.yaml
--'  11  0  ~/firstSetup/playbook_dev.yaml
--'  1  0  ~/firstSetup/playbook_dev.yaml
 -'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
 -'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
 -'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
 -'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  11  0  ~/firstSetup/playbook_dev.yaml
--'  1  0  ~/firstSetup/playbook_dev.yaml
 -'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
 -'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
 -'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
 -'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  18  19  ~/project-python/modules/playbook-docker-deploy1.yaml
 -'  17  10  ~/project-python/modules/playbook-docker-deploy1.yaml
--'  26  14  ~/project-python/modules/playbook-docker-deploy1.yaml
 -'  34  0  ~/project-python/modules/playbook-docker-deploy1.yaml
 -'  13  35  ~/project-python/modules/playbook-docker-deploy1.yaml
--'  1  0  ~/project-python/modules/playbook-docker-deploy1.yaml
--'  40  0  ~/project-python/modules/packer2.json
--'  22  3  ~/project-python/modules/packer2.json
+-'  23  3  ~/project-python/modules/packer2.json
 -'  1  0  ~/project-python/modules/packer2.json
--'  1  0  ~/project-python/modules/playbook-docker-deploy.yaml
--'  11  0  ~/firstSetup/playbook_dev.yaml
--'  1  0  ~/firstSetup/playbook_dev.yaml
--'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  11  0  ~/firstSetup/playbook_dev.yaml
--'  1  0  ~/firstSetup/playbook_dev.yaml
--'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/project-python/modules/playbook-docker-deploy.yaml
--'  11  0  ~/firstSetup/playbook_dev.yaml
--'  1  0  ~/firstSetup/playbook_dev.yaml
--'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  11  0  ~/firstSetup/playbook_dev.yaml
--'  1  0  ~/firstSetup/playbook_dev.yaml
--'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/project-python/modules/playbook-docker-deploy.yaml
--'  11  0  ~/firstSetup/playbook_dev.yaml
--'  1  0  ~/firstSetup/playbook_dev.yaml
--'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  11  0  ~/firstSetup/playbook_dev.yaml
--'  1  0  ~/firstSetup/playbook_dev.yaml
--'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/project-python/modules/playbook-docker-deploy.yaml
--'  11  0  ~/firstSetup/playbook_dev.yaml
--'  1  0  ~/firstSetup/playbook_dev.yaml
--'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  11  0  ~/firstSetup/playbook_dev.yaml
--'  1  0  ~/firstSetup/playbook_dev.yaml
--'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
--'  1  0  ~/project-python/modules/playbook-docker-deploy.yaml
--'  11  0  ~/firstSetup/playbook_dev.yaml
--'  1  0  ~/firstSetup/playbook_dev.yaml
--'  27  0  ~/firstSetup/roles/packer_docker/tasks/main.yaml
 
 # History of marks within files (newest to oldest):
 
-> ~/.gitconfig
-	"	2	32
-	^	2	33
-	.	2	32
-	+	2	32
-
 > ~/.gitignore_global
+	"	17	30
+	^	17	31
+	.	17	1
+	+	12	10
+	+	13	11
+	+	14	10
+	+	16	0
+	+	15	19
+	+	17	1
+
+> ~/firstSetup/playbook.yaml
+	"	1	0
+	^	1	0
+	.	9	0
+	+	31	7
+	+	9	0
+	+	27	0
+	+	28	0
+	+	29	0
+	+	30	14
+	+	31	0
+	+	31	4
+	+	31	0
+	+	31	8
+	+	31	0
+	+	30	0
+	+	24	32
+	+	30	0
+	+	27	0
+	+	28	0
+	+	29	0
+	+	30	0
+	+	32	6
+	+	32	0
+	+	9	0
+
+> ~/firstSetup/roles/kvm/vars/main.yaml
+	"	2	5
+	^	2	6
+	.	2	6
+	+	3	12
+	+	19	2
+	+	18	5
+	+	3	97
+	+	18	61
+	+	19	0
+	+	3	177
+	+	17	15
+	+	3	15
+	+	4	8
+	+	5	11
+	+	6	17
+	+	7	14
+	+	8	7
+	+	9	12
+	+	10	12
+	+	11	18
+	+	12	18
+	+	13	16
+	+	14	15
+	+	15	16
+	+	2	6
+
+> ~/project-kali/deploykali.sh
+	"	22	6
+	^	22	7
+	.	22	7
+	+	16	9
+	+	22	1
+	+	23	0
+	+	23	0
+	+	26	0
+	+	27	0
+	+	28	0
+	+	29	0
+	+	30	0
+	+	16	11
+	+	16	11
+	+	15	7
+	+	16	15
+	+	16	20
+	+	16	21
+	+	17	21
+	+	19	21
+	+	20	21
+	+	21	20
+	+	22	21
+	+	22	21
+	+	16	22
+	+	16	22
+	+	17	22
+	+	19	22
+	+	20	22
+	+	22	22
+	+	22	22
+	+	21	24
+	+	16	26
+	+	17	28
+	+	19	31
+	+	20	31
+	+	22	21
+	+	22	29
+	+	22	42
+	+	16	68
+	+	3	13
+	+	4	10
+	+	5	9
+	+	9	14
+	+	10	11
+	+	11	10
+	+	13	0
+	+	6	35
+	+	7	19
+	+	8	12
+	+	12	21
+	+	14	0
+	+	20	9
+	+	15	6
+	+	16	6
+	+	16	8
+	+	16	12
+	+	17	9
+	+	19	12
+	+	21	10
+	+	22	9
+	+	22	10
+	+	14	12
+	+	5	3
+	+	16	12
+	+	16	10
+	+	16	12
+	+	17	18
+	+	19	24
+	+	20	32
+	+	22	32
+	+	21	15
+	+	22	20
+	+	16	60
+	+	16	0
+	+	5	0
+	+	16	39
+	+	6	45
+	+	16	68
+	+	16	10
+	+	15	6
+	+	16	5
+	+	16	7
+	+	5	0
+	+	16	0
+	+	10	0
+	+	8	12
+	+	15	14
+	+	16	10
+	+	8	11
+	+	16	38
+	+	17	12
+	+	18	15
+	+	19	0
+	+	17	0
+	+	18	0
+	+	26	0
+	+	22	21
+	+	24	0
+	+	25	0
+	+	27	0
+	+	23	0
+	+	22	7
+
+> ~/project-vagrant/Vagrantfile
+	"	70	0
+	.	71	0
+	+	48	0
+	+	67	0
+	+	71	0
+	+	89	36
+	+	89	2
+	+	89	48
+	+	89	29
+	+	89	21
+	+	89	43
+	+	89	11
+	+	89	11
+	+	89	4
+	+	89	4
+	+	89	7
+	+	89	7
+	+	89	4
+	+	89	4
+	+	89	29
+	+	89	40
+	+	89	6
+	+	89	6
+	+	89	0
+	+	89	0
+	+	89	0
+	+	89	43
+	+	89	4
+	+	89	2
+	+	89	0
+	+	89	0
+	+	89	39
+	+	89	22
+	+	89	4
+	+	91	0
+	+	89	8
+	+	89	9
+	+	89	9
+	+	89	9
+	+	89	4
+	+	89	2
+	+	89	0
+	+	89	0
+	+	89	0
+	+	89	4
+	+	89	19
+	+	89	9
+	+	89	4
+	+	71	0
+	+	89	0
+	+	89	32
+	+	91	0
+	+	44	0
+	+	43	41
+	+	47	0
+	+	50	0
+	+	48	0
+	+	89	0
+	+	89	1
+	+	89	4
+	+	89	0
+	+	89	5
+	+	89	54
+	+	89	0
+	+	89	0
+	+	89	0
+	+	32	0
+	+	33	5
+	+	33	23
+	+	40	3
+	+	33	10
+	+	34	17
+	+	36	16
+	+	35	26
+	+	37	29
+	+	43	0
+	+	11	0
+	+	15	0
+	+	12	41
+	+	13	29
+	+	71	0
+	+	89	0
+	+	88	5
+	+	89	0
+	+	71	48
+	+	74	19
+	+	75	28
+	+	76	45
+	+	77	11
+	+	78	11
+	+	77	41
+	+	78	73
+	+	81	11
+	+	79	11
+	+	82	43
+	+	71	44
+	+	84	34
+	+	89	0
+	+	89	4
+	+	71	0
+
+> ~/.vagrant.d/setup_version
 	"	1	0
 
-> ~/newgit/.gitignore_global
-	"	1	0
+> ~/firstSetup/roles/kvm/tasks/main.yaml
+	"	27	0
+	^	27	0
+	.	28	0
+	+	6	15
+	+	28	23
+	+	20	29
+	+	25	16
+	+	26	11
+	+	27	12
+	+	26	12
+	+	27	19
+	+	26	29
+	+	28	23
+	+	32	17
+	+	33	24
+	+	29	10
+	+	6	24
+	+	31	22
+	+	21	11
+	+	29	11
+	+	28	0
 
-> ~/project-python/modules1/index.py
-	"	1	28
+> ~/project-vagrant-vb/Vagrantfile
+	"	47	0
+	^	70	5
+	.	103	5
+	+	46	5
+	+	103	5
 
-> ~/project-python/modules1/docker-compose.yaml
-	"	4	0
+> ~/project-vagrant/Vagrantfile_vb
+	"	2	2
+	^	13	52
+	.	13	51
+	+	6	0
+	+	7	0
+	+	7	0
+	+	22	0
+	+	7	39
+	+	8	5
+	+	9	5
+	+	11	0
+	+	20	4
+	+	13	2
+	+	14	1
+	+	13	51
+
+> ~/project-vagrant/VagrantfileCentos
+	"	24	0
+
+> ~/firstSetup/roles/vb/tasks/main.yaml
+	"	24	24
+	^	24	25
+	.	24	24
+	+	16	29
+	+	2	0
+	+	17	12
+	+	22	0
+	+	19	11
+	+	20	0
+	+	19	86
+	+	16	0
+	+	3	28
+	+	14	17
+	+	6	18
+	+	12	19
+	+	14	2
+	+	14	2
+	+	14	16
+	+	16	0
+	+	9	26
+	+	6	20
+	+	7	16
+	+	8	2
+	+	9	2
+	+	10	2
+	+	11	2
+	+	12	2
+	+	16	0
+	+	14	6
+	+	12	8
+	+	7	16
+	+	20	18
+	+	16	35
+	+	19	12
+	+	20	19
+	+	22	0
+	+	16	0
+	+	17	0
+	+	18	0
+	+	19	0
+	+	20	0
+	+	22	19
+	+	22	17
+	+	22	0
+	+	22	0
+	+	22	0
+	+	16	0
+	+	17	0
+	+	18	0
+	+	19	0
+	+	20	0
+	+	22	0
+	+	7	17
+	+	24	24
+
+> ~/firstSetup/roles/vb/vars/main.yaml
+	"	3	0
+	^	3	1
+	.	3	0
+	+	3	0
+
+> ~/firstSetup/roles/vagrant_only/tasks/main.yaml
+	"	28	0
+
+> ~/firstSetup/playbook_dev.yaml
+	"	6	0
+	^	6	0
+	.	5	0
+	+	7	0
+	+	5	0
+	+	4	18
+	+	5	0
+
+> ~/project-vagrant/playbook_kali.yaml
+	"	4	8
+	^	4	9
+	.	2	12
+	+	2	12
+
+> ~/project-vagrant/playbook_debian.yaml
+	"	5	0
+	^	5	1
+	.	5	0
+	+	4	0
+	+	5	0
+
+> ~/project-vagrant/playbook_centos.yaml
+	"	5	0
+	^	5	1
+	.	5	0
+	+	4	0
+	+	5	0
+
+> ~/project-python/modules/playbook-docker-deploy.yaml
+	"	17	21
+	^	17	22
+	.	17	21
+	+	25	39
+	+	30	35
+	+	6	0
+	+	7	0
+	+	21	0
+	+	21	20
+	+	20	22
+	+	16	22
+	+	32	0
+	+	35	0
+	+	36	0
+	+	37	0
+	+	38	0
+	+	39	0
+	+	40	0
+	+	41	0
+	+	30	35
+	+	38	0
+	+	39	0
+	+	40	0
+	+	41	0
+	+	42	0
+	+	43	0
+	+	44	0
+	+	45	0
+	+	21	0
+	+	21	20
+	+	44	13
+	+	7	0
+	+	6	0
+	+	29	0
+	+	4	19
+	+	44	20
+	+	4	17
+	+	5	0
+	+	16	0
+	+	17	0
+	+	21	62
+	+	21	20
+	+	21	20
+	+	30	34
+	+	31	38
+	+	22	18
+	+	32	21
+	+	33	28
+	+	32	10
+	+	33	12
+	+	16	0
+	+	32	0
+	+	33	0
+	+	16	22
+	+	30	0
+	+	31	0
+	+	34	0
+	+	35	0
+	+	36	0
+	+	37	0
+	+	17	21
+
+> ~/project-python/modules/packer2.json
+	"	39	0
+	^	39	0
+	.	40	0
+	+	21	35
+	+	37	17
+	+	36	34
+	+	13	24
+	+	21	1
+	+	19	23
+	+	36	21
+	+	39	4
+	+	39	4
+	+	39	25
+	+	20	44
+	+	38	5
+	+	40	0
 
 > ~/project-python/modules/playbook-docker-deploy1.yaml
-	"	18	19
+	"	26	12
 	^	18	20
 	.	18	19
 	+	9	0
@@ -182,36 +676,3 @@
 	+	9	0
 	+	10	0
 	+	18	19
-
-> ~/project-python/modules/packer2.json
-	"	40	0
-	^	40	0
-	.	19	23
-	+	20	35
-	+	36	17
-	+	35	34
-	+	13	24
-	+	20	1
-	+	19	23
-
-> ~/project-python/modules/playbook-docker-deploy.yaml
-	"	1	0
-
-> ~/firstSetup/playbook_dev.yaml
-	"	11	0
-	^	11	0
-	.	11	0
-	+	11	0
-
-> ~/firstSetup/roles/packer_docker/tasks/main.yaml
-	"	27	0
-	^	27	0
-	.	26	35
-	+	23	0
-	+	24	0
-	+	25	0
-	+	26	0
-	+	26	9
-	+	26	20
-	+	26	20
-	+	26	35

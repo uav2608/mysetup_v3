@@ -1,7 +1,8 @@
 ---
 - hosts: localhost
   connection: local
-  become: yes
+  gather_facts: no
+#  become: yes
   vars:
     desired_state: present
   tasks:
@@ -12,19 +13,24 @@
 #        name: dev_app
       docker_service:
         project_name: flask
-        state: "{{ desired_state }}"
+        state: present
+        restarted: yes
         build: yes
         definition:
-          version: "3.3"
+          version: "3.5"
           networks: 
-            web_dev:
+            web_net:
           services:
             web_dev:
-              image: uav2608.flask.v1:0.0.3
+              image: uav2608.flask:0.0.4
               ports:
                 - "4000:4000"
               volumes:
                 - ".:/app"
+#              command: "/bin/bash"
+#              command: "python index.py"
+#          state: 
+#            running: true
               environment:
                 ENV: development
                 PORT: 4000
@@ -33,9 +39,9 @@
     - debug: 
         var: 
           output
-#    - assert:
-#        that:
-#          - "web_dev.flask_web_dev_1.state.running"
-#      when: desired_state == "present"
+    - assert:
+        that:
+          - "web_dev.flask_web_dev_1.state.running"
+      when: desired_state == "present"
 
 

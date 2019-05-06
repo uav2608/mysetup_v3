@@ -9,6 +9,12 @@
 .cache/*
 .atom/*
 *.db
+.vagrant/*
+.vagrant.d/*
+.ansible/*
+.config/VirtualBox/*
+.mozilla/*
+.xfce4-session.verbose-log.last
 
 # Packages #
 ############
