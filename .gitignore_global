@@ -15,6 +15,7 @@
 .config/VirtualBox/*
 .mozilla/*
 .xfce4-session.verbose-log.last
+vault_pass
 
 # Packages #
 ############

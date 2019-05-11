@@ -2,6 +2,7 @@
 - hosts: 127.0.0.1
   connection: local
   gather_facts: yes
+#  remote_user: root
   become: true
   become_method: su
   become_user: root
@@ -13,8 +14,8 @@
   connection: local
   gather_facts: yes
   become: true
-  become_method: su
-  become_user: root
+#  become_method: su
+#  become_user: root
   vars:
     linux_desktop: xfce
   vars_files:
@@ -29,8 +30,8 @@
     - linux_desktop
     - vagrant
     - kvm   
-#    - vb
 
+#    - vb
 #    - vboxguest
 #    - vagrant_only
 #    - role: PeterMosmans.virtualbox-guest 

@@ -1,0 +1,11 @@
+
+[kali]
+192.168.122.17
+
+[centos]
+centos01
+centos02
+
+[debian]
+debian01
+debian02

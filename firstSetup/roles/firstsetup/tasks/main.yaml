@@ -9,6 +9,13 @@
       name: "{{ ansible_user }}"
       groups: wheel
 
+- name: Create a 2048-bit SSH key for user (ansible_user)
+  user:
+      name: "{{ ansible_user }}"
+      generate_ssh_key: yes
+      ssh_key_bits: 2048
+      ssh_key_file: .ssh/id_rsa
+
 - name: Update sudoer file
   lineinfile:
       path: /etc/sudoers

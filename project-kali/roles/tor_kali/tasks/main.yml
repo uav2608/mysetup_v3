@@ -1,0 +1,33 @@
+---
+# tasks file for tor_kali
+
+#- name: add additional repository for torbrowser launcher
+#  apt_repository:
+#    repo: "{{ item }}" 
+#    state: present
+#  loop: "{{ repo_packages }}"
+
+#- name: apt update
+#  apt:
+#    update_cache: yes
+ 
+- name: install tor
+  apt:
+    name: "{{ item }}"
+    state: absent
+  loop: "{{ tor_packages }}"
+
+- name: Create directory
+  become: False
+  file:
+    path: /home/{{ansible_user}}/tor-browser
+    state: directory
+    mode: 0755
+
+- name: Download and unarchive Tor Browser
+  become: False
+  unarchive:
+    src: https://www.torproject.org/dist/torbrowser/8.0.9/tor-browser-linux64-8.0.9_en-US.tar.xz
+    dest: /home/{{ansible_user}}/tor-browser
+    remote_src: yes 
+

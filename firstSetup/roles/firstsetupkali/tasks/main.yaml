@@ -1,0 +1,69 @@
+---
+- name: Make sure to have Sudo group
+  group:
+      name: sudo
+      state: present
+
+- name: Add user to Sudo group
+  user:
+      name: "{{ ansible_user }}"
+      groups: sudo
+
+- name: Update sudoer file
+  lineinfile:
+      path: /etc/sudoers
+      state: present
+      regexp: '^%sudo\s'
+      line: '%sudo ALL=(ALL) NOPASSWD: ALL'
+      validate: '/usr/sbin/visudo -cf %s'
+
+- name: create a .ssh directory if it doesn't exist
+  file:
+      path:  /home/{{ ansible_user }}/.ssh
+      state: directory
+      owner: "{{ ansible_user }}"
+      group: "{{ ansible_user }}"
+      mode: 0700
+
+- name: create file
+  file:
+      path: /home/{{ ansible_user }}/.ssh/authorized_keys
+      state: touch
+      owner: "{{ ansible_user }}"
+      group: "{{ ansible_user }}"
+      mode: 0644
+
+- name: Copy authorized_keys
+  lineinfile:
+      path: /home/{{ ansible_user }}/.ssh/authorized_keys
+      state: present
+      line: "{{ auth_key_initial }}"
+
+#- name: create file
+#  file:
+#      path: /etc/sysconfig/network-scripts/ifcfg-ens37
+#      state: touch
+#      owner: root
+#      group: root
+#      mode: 0644
+#      modification_time: "preserve"
+#      access_time: "preserve"
+
+#- name: Make network interface up
+#  net_interface:
+#      name: ifcfg-ens37
+#      enabled: True 
+
+#- name: Assign static IP
+#  template:
+#      src: static_ip
+#      dest: /etc/sysconfig/network-scripts/ifcfg-ens37
+#      owner: root
+#      group: root
+#      mode: 0644
+
+#- name: Restart network
+#  service:
+#     name: network
+#     state: restarted
+
