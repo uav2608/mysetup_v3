@@ -15,11 +15,11 @@ cert_files:
 
 country          : "USCH"
 
-myipaddressudp2500 : "{{ USNY.UDP2500 }}"
-myipaddressudp53   : "{{ USNY.UDP53 }}"
-myipaddresstcp     : "{{ USNY.TCP443 }}"
-myipaddresstcpsm   : "{{ USNY.TCPShM }}"
-openvpn_name       : "{{ 'USNY' }}"
+myipaddressudp2500 : "{{ SP1.UDP2500 }}"
+myipaddressudp53   : "{{ SP1.UDP53 }}"
+myipaddresstcp     : "{{ SP1.TCP443 }}"
+myipaddresstcpsm   : "{{ SP1.TCPShM }}"
+openvpn_name       : "{{ 'SP1' }}"
 
 
 with4k             : ['USLA', 'USNY', 'UKR2', 'UKR1', 'TR1', 'CH1', 'SW1', 'SP1', 'RU2', 'ND2', 'ND1', 'HK1', 'GER1', 'FR1', 'BG1']

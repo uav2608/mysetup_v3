@@ -47,10 +47,10 @@
       dest=/etc/network/interfaces
   when: ansible_facts['os_family'] == "Kali GNU/Linux"
   
-#- name: Restart network
-#  service:
-#     name: network
-#     state: restarted
+- name: Enable SSH
+  service:
+     name: ssh
+     enabled: yes
 
    
 #- name: Assign static IP

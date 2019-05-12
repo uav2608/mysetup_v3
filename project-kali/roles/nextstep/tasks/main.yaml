@@ -1,4 +1,8 @@
 ---
+#- name: "apt-get upgrade"
+#  apt:
+#      upgrade: dist
+
 - name: add additional repository 
   apt_repository:
     repo: "{{ item }}"
