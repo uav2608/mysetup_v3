@@ -29,12 +29,13 @@ end
 
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.provider "libvirt"
+  config.vm.box = "centos/7"
+  config.vm.synced_folder ".", "/vagrant", type: "rsync"
+
   (1..numserverscentos).each do |i|
       servernamecentos = "centos%02d" % i
       config.vm.define servernamecentos do |svr1|
-        svr1.vm.provider "libvirt"
-        svr1.vm.box = "centos/7"
-        svr1.vm.synced_folder ".", "/vagrant", type: "rsync"
         svr1.vm.hostname = servernamecentos
         svr1.vm.network "private_network", ip: serverscentos [servernamecentos][:ip]
         svr1.vm.provision "shell",
@@ -46,24 +47,26 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           }
         end
       end
-  end
+  end 
+
+  config.vm.box = "debian/stretch64"
+  config.vm.synced_folder ".", "/vagrant", type: "rsync"
 
   (1..numserversdebian).each do |i|
       servernamedebian = "debian%02d" % i
       config.vm.define servernamedebian do |svr2|
-        svr2.vm.provider "libvirt"
-        svr2.vm.box = "debian/stretch64"
-        svr2.vm.synced_folder ".", "/vagrant", type: "rsync"
         svr2.vm.hostname = servernamedebian
         svr2.vm.network "private_network", ip: serversdebian [servernamedebian][:ip]
         svr2.vm.provision "shell",
           inline: "sudo apt-get update && sudo apt install -y python"
         svr2.vm.provision "ansible" do |ansible|
-          ansible.playbook = "playbook_debian.yaml"
+          ansible.playbook = "playbook_centos.yaml"
           ansible.extra_vars = {
             serversdebian: serversdebian
           }
         end
       end
   end
+
 end
+

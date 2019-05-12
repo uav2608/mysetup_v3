@@ -1,832 +1,1000 @@
-ip addr show
-ping 8.8.8.8
-su -
-pwd
-git init
-git config-global core.excludesfile ~./gitignore_global
-git config --global core.excludesfile ~./gitignore_global
-git config --global user.email "uav2608@gmail.com"
-git config --global user.name "uav2608"
-git remote add origin https://github.com/uav2608/mysetup_v3.git
-git pull origin master
-ls -lah
-touch .gitignore_global
-ls -lah
-git pull origin master
-vi .gitconfig 
-ls
+ansible kali -b -B -m shell -a "openvpn --config /etc/openvpn/client/udp53.conf --ca /etc/openvpn/client/ca-4k.crt --cert /etc/openvpn/client/user-4k.crt --key /etc/openvpn/client/user-4k.key"
+ansible kali -b -B -a "openvpn --config /etc/openvpn/client/udp53.conf --ca /etc/openvpn/client/ca-4k.crt --cert /etc/openvpn/client/user-4k.crt --key /etc/openvpn/client/user-4k.key"
+ansible kali -b -B 3600 -m shell -a "openvpn --config /etc/openvpn/client/udp53.conf --ca /etc/openvpn/client/ca-4k.crt --cert /etc/openvpn/client/user-4k.crt --key /etc/openvpn/client/user-4k.key"
+ansible kali -b -a "killall openvpn"
+ansible kali -b -B 3600 -m shell -a "openvpn --config /etc/openvpn/client/udp53.conf --ca /etc/openvpn/client/ca-4k.crt --cert /etc/openvpn/client/user-4k.crt --key /etc/openvpn/client/user-4k.key"
+ansible kali -m shell -a "wget -qO - ipv4bot.whatismyipaddress.com"
+sudo yum remove -y qemu libvirt libvirt-devel ruby-devel gcc qemu-kvm qemu-img virt-manager libvirt-python libvirt-client virt-install virt-viewer
+sudo yum remove -y qemu libvirt libvirt-devel ruby-devel gcc qemu-kvm qemu-img libvirt-python libvirt-client virt-install virt-viewer
+sudo yum install -y qemu libvirt libvirt-devel ruby-devel gcc qemu-kvm qemu-img libvirt-python libvirt-client virt-install virt-viewer
+vpwd
 pwd
 ls
-ls -lah
-git pull origin master
+cd project-kali/
+ls
+vim deploykali.sh 
+sudo sh deploykali.sh 
+vim deploykali.sh 
+sudo sh deploykali.sh 
+sudo virsh list --all
+virsh destroy kali2
+virsh undefine kali2
+sudo virsh list --all
+sudo virsh destroy kali2
+sudo virsh list --all
+sudo virsh undefiny kali2
+sudo virsh undefine kali2
+sudo virsh list --all
+;s
+ls
+vim deploykali.sh 
+cd ..
+ls
+cd firstSetup/
+ls
+vim playbook.yaml 
+vim playbook_kali.yaml
+vim playbook.yaml 
+vim playbook_kali.yaml
+ls
+vim hosts
+cd roles/
+ls
+cd firstsetup/
+ls
+vim tasks/main.yaml 
+ls
+cd .
+cd ..
+ls
+cp -r firstsetup/ firstsetupkali/
+ls
+cd firstsetupkali/
+vim tasks/main.yaml 
+cd ..
+ls
 pwd
-vi .gitconfig 
-git pull origin master
-ls -lah
+ls
+vim playbook.yaml 
+cd ..
+cd project-kali/
+ls
+vim hosts
+ls
+ansible-playbook playbook_kali.yaml -K
+ansible-playbook -hosts playbook_kali.yaml -K
+ansible-playbook -i hosts playbook_kali.yaml -K
+ansible-playbook playbook_kali.yaml -K
+vim hosts 
+vim playbook_kali.yaml 
+ansible-playbook playbook_kali.yaml -K
+ansible all -i hosts -m ping -k
+ansible all -i hosts -m ping --become-user --become-method=su -k
+ansible all -i hosts -m ping --become-user=root --become-method=su -k
+ansible all -i hosts -m ping --become-user=root --become-method=su -K
+ansible all -i hosts -m ping --become-user=root --become-method=su -K -k
+ansible all -i hosts -m ping -u root -k
+ansible all -i hosts -m setup -u root -k
+ansible all -i hosts -m setup -u root -k | grep ansible_user
+ansible all -i hosts -m setup -u root -k > 1.txt
+ls
+vim 1.txt 
+ls
+vim ansible.cfg 
+ansible-playbook playbook_kali.yaml -K
+ansible-playbook playbook_kali.yaml -K -vvv
+vim hosts 
+vim playbook_kali.yaml 
+ansible all -i hosts -m ping -u root -k
+vim playbook_kali.yaml 
+ansible-playbook playbook_kali.yaml -K
+vim playbook_kali.
+vim playbook_kali.yaml 
+vim hosts 
+vim playbook_kali.yaml 
+ansible-playbook playbook_kali.yaml -k
+ls
+rm *.retry
+mkdir roles
+cd roles/
+ansible-galaxy init firstSetupKali
+ls
+cd ..
+ls
+cd roles/
+cd firstSetupKali/
+ls
+cd ..
+ls
+mv firstSetupKali/ firstSetupOthers/
+ls
+cd firstSetupOthers/
+vim tasks/main.yml 
+vim handlers/main.yml 
+ls
+vim vars/main.yml 
+vim tasks/main.yml 
+cd ..
+ls
+cd ..
+ls
+vim playbook_kali.yaml 
+ansible-playbook playbook_kali.yaml -k --ask-vault-pass
+ls
+vim vault_pass
+vim 1.txt 
+ls
+ansible-playbook playbook_kali.yaml -k --ask-vault-pass
+ls
+vim deploykali.sh 
+ls
+cd roles/
+ls
 pwd
-vi .gitconfig 
-git pull origin master
 ls
-ls -lah
-git status
-git pull master origin
-git pull origin
-git pull origin master
-git checkout master
+cd nextstep/
 ls
-git clone https://github.com/uav2608/mysetup_v3.git
+vim vars/main.yaml 
+vim tasks/main.yaml 
 ls
-cd mysetup_v3/
+pwd
+cd ..
+vim playbook_kali.yaml 
+ansible-playbook playbook_kali.yaml 
+vim playbook_kali.yaml 
+ansible-playbook playbook_kali.yaml 
+vim playbook_kali.yaml 
+ansible-playbook playbook_kali.yaml 
 ls
-ls -lah
-mv -r * ..
-mv -R * ..
-mv * ..
-ls -lah
+cd roles/
+ls
+cd openvpn/tasks/main.yml 
+vim openvpn/tasks/main.yml 
+ls
+cd openvpn/
+ls
+cd files/
+ls
+vim myip.sh
 cd ..
 ls
-ls -lah
-cd mysetup_v3/
-cp .gitignore_global ..
-cd ..
-vi .gitignore_global 
-ls
-cd firstSetup/
-ls
-vi playbook.yaml 
-ansible-playbook -K playbook.yaml --ask-vault-pass
-cd roles/packer_docker/tasks/
-vi main.yaml 
-ls
-ansible-playbook -K playbook.yaml --ask-vault-pass
-vi playbook.yaml 
-vi main.yaml 
+vim tasks/main.yml 
 cd ..
 ls
-cd ,,
+vim playbook_kali.yaml 
+vim roles/openvpn/tasks/main.yml 
+cd roles/
+cd openvpn/
+cd templates/
+ls
 cd ..
 ls
-cd firstSetup/
-ansible-playbook -K playbook.yaml --ask-vault-pass
-ls
-cd roles/packer_docker/tasks/
-vim main.yaml 
-cd ~
-cd firstSetup/
-ansible-playbook -K playbook.yaml --ask-vault-pass
-packer.io
-docker --version
-docker-compose --version
-vagrant --version
+cd nextstep/
+vim tasks/main.yaml 
+vim vars/main.yaml 
 cd ..
+cd openvpn/
 ls
-ls -lah
-cd .ssh/
-cat authorized_keys 
-cd ..
+cd files/
 ls
-cd firstSetup/
+pwd
 ls
-vim playbook_dev.yaml 
+ansible-vault encrypt user-4k.crt 
+ansible-vault encrypt user-4k.key 
+ansible-vault encrypt user.key 
+ansible-vault encrypt user.crt 
 ls
-ansible-playbook playbook_dev.yaml 
-ansible-playbook playbook_dev.yaml --ask-vault-pass
-sudo -ls /root
-sudo ls /root
-reboot
-sudo ls /root
-ls
-cd firstSetup/
-ansible-playbook playbook_dev.yaml --ask-vault-pass
-sudo systemctl get-default
-sudo systemctl set-default graphical.target
-reboot
-ip addr sho
+cat user-4k.crt 
+cat user-4k.key 
+cat user.key 
+cat user.crt 
 clear
 ls
-cd project-python/
+cd ..
+cd templates/
 ls
-cd modules
+touch udp.j2
+touch tcp.j2
 ls
-vim playbook-docker-deploy.yaml 
-packer.io build packer2.json 
-docker images
-cp playbook-docker-deploy.yaml playbook-docker-deploy1.yaml 
-vim playbook-docker-deploy1.yaml 
-ansible-playbook playbook-docker-deploy1.yaml 
-docker ps
-docker ps -all
-docker logs 1266b2a
-docker images
-docker run -it uav2608.flask.v1:0.0.3 /bin/bash
-vim playbook-docker-deploy1.yaml 
-ansible-playbook playbook-docker-deploy1.yaml 
-docker ps
-docker ps -all 
-docker exec -it ede0c88005ba /bin/bash
+vim udp.j2 
+vim tcp.j2 
+vim udp.j2 
 ls
-vim packer2.json 
-packer.io build packer2.json 
-docker images
-docker run -it -d 4f31dfddd323 /bin/bash
-docker run -it -d 4f31dfddd323
-vim packer2.json 
-packer.io build packer2.json 
-docker images
-docker run -it uav2608.flask:0.0.4 /bin/bash
-vim playbook-docker-deploy1.yaml 
-ansible-playbook playbook-docker-deploy1.yaml 
-docker ps
-docker ps --all
-docker logs flask_web_dev_1
-vim playbook-docker-deploy1.yaml 
-ansible-playbook playbook-docker-deploy1.yaml 
-docker ps
-docker ps --all
-docker logs flask_web_dev_1
-ansible-playbook playbook-docker-deploy1.yaml  -vvvv
-vim playbook-docker-deploy1.yaml 
-ansible-playbook playbook-docker-deploy1.yaml  -vvvv
-ansible-playbook playbook-docker-deploy1.yaml 
-vim playbook-docker-deploy1.yaml 
-ansible-playbook playbook-docker-deploy1.yaml 
-vim playbook-docker-deploy1.yaml 
-ansible-playbook playbook-docker-deploy1.yaml 
-vim playbook-docker-deploy1.yaml 
-docker images
-docker run uav2608.flask:0.0.4 -it 
-docker run -it uav2608.flask:0.0.4 /bin/bash
-docker run -it -p "4000:4000" uav2608.flask:0.0.4 /bin/bash
+rm tcp.j2 
+cp udp.j2 tcp.j2
+vim tcp.j2 
 cd ..
 ls
-mkdir project1
-cd project1/
-ls
-touch packer.json
-touch playbook.yaml
-touch playbook-deploy.yaml
-touch playbook-stop.yaml
-ls
-sudo yum install -y firefox
-ip addr show
+vim tasks/main.yml 
+cd files/
 ls
 pwd
 ls
+ansible-vault encrypt ca.crt 
+ansible-vault encrypt ca-4k.crt 
 ls
-c project-vagrant/
-cd project-vagrant/
-ls
-vim playbook_centos.yaml 
-vim playbook_debian.yaml 
-vim Vagrantfile
-vagrant up
-vagrant status
-ls
-vim playbook_centos.yaml 
-vim playbook_debian.yaml 
-vagrant list
-vagrant status
-vagrant ssh centos-1
-vagrant ssh centos01
-vim Vagrantfile
-vagrant reload
-vim Vagrantfile
-ls
-cp playbook_centos.yaml playbook_kali.yaml
-vim playbook_kali.yaml 
-vim Vagrantfile
-vagrant reload
-vim Vagrantfile
-vagrant reload
-vagrant status
-cp Vagrantfile Vagrantfile_vb
-vim Vagrantfile_vb 
-vagrant up --vagrantfile Vagrantfile_vb 
-VAGRANT_VAGRANTFILE=Vagrantfile_vb vagrant up
-vim Vagrantfile_vb 
-VAGRANT_VAGRANTFILE=Vagrantfile_vb vagrant up
-vim Vagrantfile_vb 
-VAGRANT_VAGRANTFILE=Vagrantfile_vb vagrant up
-vagrant status
-VAGRANT_VAGRANTFILE=Vagrantfile_vb vagrant up --provider virtualbox
-VAGRANT_VAGRANTFILE=Vagrantfile_vb vagrant up
-VAGRANT_VAGRANTFILE=Vagrantfile_vb vagrant up --provider virtualbox
-cd project-python/modules1
-ls
-vim docker-compose.yaml 
-ls
-vim index.py 
-cd ..
-cd modules
+cat ca.crt 
+cat ca-4k.crt 
+clear
 ls
 cd ..
+vim vars/main.yml 
+vim tasks/main.yml 
+vim templates/udp.j2 
+vim vars/main.yml 
+cd templates/
+ls
+cp tcp.j2 tcpShM.j2 
+vim tcpShM.j2 
+cd ..
+vim tasks/main.yml 
+vim templates/tcpShM.j2 
+vim vars/main.yml 
+vim templates/tcp.j2 
+vim templates/udp.j2 
+vim templates/tcpShM.j2 
+vim vars/main.yml 
+vim templates/tcpShM.j2 
+vim templates/tcp.j2 
+vim templates/tcpShM.j2 
+vim vars/main.yml 
+cd templates/
+ls
+mv tcp.j2 tcp1.j2
+cp tcp1.j2 tcp2.j2
+vim tcp2.j2 
+ls
+mv udp.j2 udp1.j2 
+cp udp1.j2 udp2.j2 
+vim udp2.j2 
+ls
+mv tcpShM.j2 tcpShM1.j2 
+cp tcpShM1.j2 tcpShM2.j2 
+vim tcpShM2.j2 
+cd ..
+ls
+vim tasks/main.yml 
+cd files/
+ls
+cd ..
+vim vars/main.yml 
+vim tasks/main.yml 
+ls
+cd ISO/
 ls
 pwd
-mkdir newgit
-cd newgit/
-git init
-git config --global user.email "uav2608@gmail.com" 
-git config --global user.name "uav2608" 
-ls
-ls -lah
-cd ..
-ls
-ls lah
-pwd
-ls
-ls -lah
-cd newgit/
-ls
-ls -lah
-git remote add origin https://github.com/uav2608/mysetup_v3.git
-git pull origin master
-ls
-ls -lah
-vim .gitignore_global 
-cd ..
-vim .gitignore_global 
-cd 
-;s
-pwd
-ls
-rm -r newgit/
-ls
-cd project-python/
-ls
-cd project1/
-cd ..
-ls
-cd ..
-ls
-git add .
-git status
-ls
-ls -lah
-git pull origin master
-git add .
-git commit -m "v5"
-git push origin master
-ls
-vim .gitconfig 
-git rm -rf --cached
-git rm --cached
-git rm -rf -cached
-git rm -r -f --cached
-git rm -r --cached
-git rm -rf --cached .
-git add .
-git commit -m "v6"
-git push origin master
-ls
-rm -r mysetup_v3/
-ls
-cd project-python/
-cd modules
-ls
-vim playbook-docker-deploy.yaml 
-vim playbook.yaml 
-ansible-playbook playbook-docker-deploy.yaml 
-docker ps
-vim playbook-docker-deploy.yaml 
-ansible-playbook playbook-docker-deploy.yaml 
-docker ps --all
-docker logs flask_web_dev_1
-ansible-playbook playbook-docker-deploy.yaml 
-vim playbook-docker-deploy.yaml 
-ansible-playbook playbook-docker-deploy.yaml 
-docker ps --all
-docker logs flask_web_dev_1
-vim playbook-docker-deploy.yaml 
-ansible-playbook playbook-docker-deploy.yaml 
-docker logs flask_web_dev_1
-docker run -it uav2608.flask:0.0.4 /bin/bash
-vim playbook-docker-deploy.yaml 
-ansible-playbook playbook-docker-deploy.yaml 
-docker ps
-docker logs flask_web_dev_1
-docker ps --all
-docker commit a0d9d73691e2 v1
-docker images
-docker run -it v1 /bin/bash
-docker run -it -p 4000:4000 v1 /bin/bash 
-ls
-cd flask/
-vim index.py 
-cd ..
-packer.io build packer2.json 
-ls
-vim playbook-docker-deploy1.yaml 
-vim playbook-docker-deploy.yaml 
-ansible-playbook playbook-docker-deploy.yaml 
-docker ps
-docker ps --all
-docker logs 125ed94
-docker commit 125ed94 v2
-docker images
-docker run -it v2 /bin/bash
-docker networks
-docker network
-docker network ls
-ls
-vim playbook-docker-deploy.yaml 
-ansible-playbook playbook-docker-deploy.yaml 
-docker ps --all
-docker logs flask_web_dev_1
-vim playbook-docker-deploy.yaml 
-ansible-playbook playbook-docker-deploy.yaml 
-vim playbook-docker-deploy.yaml 
-docker ps --all
-vim playbook-docker-deploy.yaml 
-ansible-playbook playbook-docker-deploy.yaml 
-vim playbook-docker-deploy.yaml 
-ansible-playbook playbook-docker-deploy.yaml 
-vim playbook-docker-deploy.yaml 
-ansible-playbook playbook-docker-deploy.yaml 
-vim playbook-docker-deploy.yaml 
-ansible-playbook playbook-docker-deploy.yaml 
-vim playbook-docker-deploy.yaml 
-ansible-playbook playbook-docker-deploy.yaml 
-vim playbook-docker-deploy.yaml 
-ansible-playbook playbook-docker-deploy.yaml 
-vim playbook-docker-deploy.yaml 
-ansible-playbook playbook-docker-deploy.yaml 
-vim playbook-docker-deploy.yaml 
-ansible-playbook playbook-docker-deploy.yaml 
-vim playbook-docker-deploy.yaml 
-ansible-playbook playbook-docker-deploy.yaml 
-docker ps --all
-docker rm 43131d 62fc09 af1869
-docker ps --all
-docker rm 93cc6b 86cc3b e0d90 a7da9b
-docker ps --all
-docker rm 7d39
-docker ps --all
-docker images
-docker rmi v1 v2 8c3894
-docker images
-docker rmi 4f31d
-docker images
-ls
-vim packer2.json 
-packer.io build packer2.json 
-vim packer2.json 
-packer.io build packer2.json 
-docker images
-docker run -it -p 4000:4000 
-docker run -it -p 4000:4000 uav2608.flask:0.0.4
-ansible-playbook playbook-docker-deploy.yam.yaml
-ansible-playbook playbook-docker-deploy.yaml
-vim playbook-docker-deploy.yaml
-ansible-playbook playbook-docker-deploy.yaml
-docker ps
-vim playbook-docker-deploy.yaml
-vim playbook-docker-deploy.yaml -vvv
-ansible-playbook playbook-docker-deploy.yaml-vvv
-ansible-playbook playbook-docker-deploy.yaml -vvv
-docker --version
-docker-compose --version
-vim playbook-docker-deploy.yaml
-ansible-playbook playbook-docker-deploy.yaml 
-docker ps
-ls
-cd ..
-ls
 cd ..
 ls
 cd firstSetup/
+cd ls
 ls
-rm playbook.retry 
+cd roles/
+ls
+cd kvm/
+vim vars/main.yaml 
+which python
+which python3
+sudo yum -y update
+yum install -y virt-manager
+sudo yum install -y virt-manager
+virt-manager
+pwd
+vim /var/mail/
+ls
+vim vars/main.yaml 
+cd ..
 ls
 rm *.retry
 ls
-vim playbook_dev.yaml 
-mv playbook_dev.yaml playbook_dev_IDE.yaml 
-ls
-cp playbook_dev_IDE.yaml playbook_dev.yaml 
-vim playbook_dev.yaml 
-ls
-cd playbook.yaml 
 vim playbook.yaml 
-cd roles/
+cd ..
+pwd
 ls
-cd vagrant_only/
+rm -rf VirtualBox\ VMs/
+ls
+ls -lah
+git add .
+git add --ignore-removal
+git add . --ignore-removal
+git commit -m "v06052019"
+git rm -rf --cached
+git rm --cached
+git rm -r--cached
+git rm -r --cached
+git rm -rf --cached . 
+git add .
+git commit -m "v06052019"
+git push origin master
+git status
+ls
+pwd
+ansible -i hosts -m "setup" -K
+ls
+cd firstSetup/
+ls
+ansible -i hosts -m "setup" -K
+ansible 192.168.122.141 -m "setup" -K
+ansible host=192.168.122.141 -m "setup" -K
+ls
+ansible -i hosts -m "setup" -K
+vim hosts 
+ansible 192.168.122.141 -m setup -K
+ansible 192.168.122.141 -m setup --become-method=su --ask-su-pass
+ansible -i hosts -m setup --become-method=su --ask-su-pass
+ansible kali -m setup --become-method=su --ask-su-pass
+ls
+mv hosts host
+ansible -i host -m setup --become-method=su --ask-su-pass
+mv host hosts
+vim hosts 
+ansible -i hosts -m setup --become-method=su --ask-su-pass
+ansible all -m setup --become-method=su --ask-su-pass
+ansible '192.168.122.141' -m setup --become-method=su --ask-su-pass
+ping 192.168.122.141
+ansible -i hosts -m setup --become-method=su --ask-su-pass -vv
+ansible -i hosts -m ping --become-method=su --ask-su-pass -vv
+ls
+ls -lah
+vim hosts 
+vim /etc/ansible/hosts 
+vim hosts 
+ansible -i hosts -m ping --become-method=su --ask-su-pass
+ansible
+ansible -i hosts
+vim /etc/ansible/hosts 
+sudo vim /etc/ansible/hosts 
+ansible -m ping --become-method=su --ask-su-pass
+ansible -i hosts -m ping --become-method=su --ask-su-pass
+ls
+mv hosts ho
+ls
+ansible -i hosts -m ping --become-method=su --ask-su-pass
+ansible -m ping --become-method=su --ask-su-pass
+sudo ansible -m ping --become-method=su --ask-su-pass
+sudo ansible -i hosts -m ping --become-method=su --ask-su-pass
+ls
+mv ho hosts
+ls
+ansible '192.168.122.141' -i hosts -m ping --become-method=su --ask-su-pass
+ansible '192.168.122.141' -i hosts -m ping --become-method=su --ask-su-pass --ask-vault-pass
+sudo /etc/ansible/hosts 
+sudo vim /etc/ansible/hosts 
+vim hosts 
+ansible kali -i hosts -m ping --become-method=su --ask-su-pass --ask-vault-pass
+ansible kali -i hosts -m ping --become-user=root --ask-su-pass --ask-vault-pass
+ansible kali -i hosts -m ping --become --ask-su-pass --ask-vault-pass
+ssh root@192.168.122.141
+ansible kali -i hosts -m ping --become-user --ask-su-pass --ask-vault-pass
+ansible kali -i hosts -m ping --become-user -K --ask-vault-pass
+ls
+vim playbook_kali.yaml 
+ansible-playbook playbook_kali.yaml -K --ask-vault-pass
+ansible-playbook playbook_kali.yaml kali -i hosts -K --ask-vault-pass
+ansible-playbook -i hosts playbook_kali.yaml -K --ask-vault-pass
+ansible-playbook -i hosts playbook_kali.yaml -K --ask-vault-pass -vvv
+vim playbook_kali.yaml 
+vim hosts 
+ansible-playbook kali -i hosts playbook_kali.yaml -K --ask-vault-pass -vvv
+ansible-playbook -i hosts playbook_kali.yaml -K --ask-vault-pass -vvv
+vim playbook_kali.yaml 
+ansible-playbook -i hosts playbook_kali.yaml -K --ask-vault-pass -vvv
+vim playbook_kali.yaml 
+ansible-playbook -i hosts playbook_kali.yaml -K --ask-vault-pass -vvv
+vim hosts 
+ansible-playbook -i hosts playbook_kali.yaml -K --ask-vault-pass -vvv
+vim playbook_kali.yaml 
+ansible-playbook -i hosts playbook_kali.yaml -K --ask-vault-pass -vvv
+vim hosts 
+ansible-playbook -i hosts playbook_kali.yaml -K --ask-vault-pass -vvv
+vim ansible.cfg
+ansible-playbook -b -v -u root playbook_kali.yaml --ask-vault-pass
+ansible-playbook -i hosts playbook_kali.yaml -K --ask-vault-pass -vvv
+ansible-playbook playbook_kali.yaml -K --ask-vault-pass -vvv
+vim hosts 
+vim playbook_kali.yaml 
+ansible-playbook playbook_kali.yaml -K --ask-vault-pass -vvv
+ansible kali -i hosts m ping
+ansible kali -i hosts m ping -b -v -u root
+ansible kali -i hosts m ping --become-user --become-method=su -K --ask-vault-pass
+ansible kali -i hosts -m ping --become-user --become-method=su - --ask-vault-pass
+ls
+cp playbook_kali.yaml ../project-kali/
+cp ansible.cfg ../project-kali/
+ls
+vim ansible.cfg 
+vim playbook_kali.yaml 
+vim hosts 
+ansible-playbook playbook_kali.yaml -k --ask-vault-pass
+cd roles/firstsetup
+vim tasks/main.yaml 
+ls
+vim handlers/main.yaml 
+ls
+cd templates/
+ls
+cd ..
+ls
+cd nextstep/
+ls
+vim tasks/main.yaml 
+vim vars/main.yaml 
+cd ..
+ls
+cd kvm/
+ls
+vim vars/main.yaml 
+cd ..
+cd firstsetup
+ls
+cd ..
+ls
+cd ..
+ls
+cd group_vars/
+ls
+cd all/
+ls
+vim vault.yaml 
+vim main.yaml 
+ls
+cp vault.yaml /home/ansibleuser1/project-kali/roles/firstSetupOthers/vars
+cp vault.yaml /home/ansibleuser1/project-kali/roles/firstSetupOthers/vars/vault.yml 
+ls
+pwd
+cd ..
+ls
+sudo virsh start kali
+ls
+mkdir IMAGES
+ls
+cd IMAGES/
+ls
+pwd
+cd ..
+rm -r IMAGES
+ls
+mkdir images
+cd images/
+ls
+cd ..
+cd images/
+pwd
+ls
+cd ..
+ls
+rm images/
+rm -r images/
+ls
+cd -lah
+ls -lah
+cd .ssh/
+ls
+vim known_hosts 
+vim authorized_keys 
+cd ..
+ls
+cd ..
+ls
+ls -lah
+cd ansibleuser1/
+ls -lah
+ls
+cd firstSetup/
+ls
+cd group_vars/
+cd all/
+ls
+vim main.yaml 
+ansible-vault edit vault.yaml 
+ls
+mv vault.yaml ..
+ls
+..
+cd ..
+ls
+cd ..
+ls
+vim vault_pass
+cd roles/firstsetup
 ls
 cd tasks/
 ls
 vim main.yaml 
 cd ..
 ls
-cp vagrant_only/ vb/
-cp -r vagrant_only/ vb/
-ls
-cd vb/
-ls
-vim tasks/main.yaml 
-vim vars/main.yaml 
-cd ..
-ls
-cd ..
-ls
 vim playbook.yaml 
-ansible-playbook playbook --ask-vault-pass
-ansible-playbook playbook.yaml --ask-vault-pass
-ansible-playbook playbook.yaml --ask-vault-pass -K
-VBoxManage --version
-sudo /sbin/vboxconfig
-VBoxManage --version
-Vbox
-VBoxManage
+ansible-playbook playbook.yaml -K --vault-id vault_pass
+vim playbook.yaml 
+ansible-playbook playbook.yaml -K --vault-id vault_pass
+cd ..
+ls
+cd ISO/
+ls
+cd ..
+ls
+wget https://yadi.sk/d/YUI-L14GzzrKF/stapesa_conf.zip
+ls
+unzip stapesa_conf.zip 
+7zip stapesa_conf.zip 
+ls
+rm stapesa_conf.zip 
+ls
+cd ..
+ls
+ansible
+ls
+cd ansibleuser1/
+ls
+sudo find / | grep stapesa_conf.zip 
+cd Downloads/
+ls
+rm stapesa_conf(1).zip
+ls
+pwd
+ls
+unzip stapesa_conf.zip 
+ls
+rm *
+ls
+vim ShadeYouVPN.com USA-3 Los Angeles UDP-53.ovpn
+vim ShadeYouVPN.com\ USA-3\ Los\ Angeles\ UDP-53.ovpn 
+vim ShadeYouVPN.com\ USA-3\ Los\ Angeles\ UDP-25000.ovpn 
+ls
+vim ShadeYouVPN.com\ USA-3\ Los\ Angeles\ TCP-443.ovpn 
+vim ShadeYouVPN.com\ USA-3\ Los\ Angeles\ TCP-ShadowMode.ovpn 
+vim ShadeYouVPN.com\ USA-3\ Los\ Angeles\ UDP-25000.ovpn 
+vim ShadeYouVPN.com\ USA-3\ Los\ Angeles\ TCP-ShadowMode.ovpn 
+vim ShadeYouVPN.com\ USA-3\ Los\ Angeles\ UDP-53.ovpn 
+vim ShadeYouVPN.com\ USA-3\ Los\ Angeles\ TCP-443.ovpn 
+ls
+cp ca* /home/ansibleuser1/project-kali/roles/openvpn/files
+vim ShadeYouVPN.com\ USA-3\ Los\ Angeles\ TCP-ShadowMode.ovpn 
+vim ShadeYouVPN.com\ USA-1\ Chicago\ torrent\ TCP-ShadowMode.ovpn 
+ls
+clear
+ls
+rm *
+ls
+cd ,,
+cd ..
+ls
+cd project-kali/
+cd roles/
+ls
+cd openvpn/
+ls
+vim vars/main.yml 
+cd ..
+cd openvpn/templates/
+ls
+sudo apt-get search ovirt
+sudo apt-get -y update
+sudo aptitude search ovirt
+exit
+ssh root@192.168.122.141
+ip addr show
+route
+route 192.168.122.141
+route -v 192.168.122.141
+ssh root@192.168.122.141 -p 7
+ssh root@192.168.122.141 -p 22
+pwd
+ls -lah
+cd .ansible/
+ls
+cd ..
+pwd
+cd /etc/ansible
+ls
+vim hosts 
+ls
+pwd
+cd ~
+cd project-kali/
+ls
+cd roles/
+cd firstSetupOthers/vars/
+ansible-vault edit main.yml 
+cd ..
+ls
+cd ..
+ls
+vim hosts 
+ansible-playbook playbook_kali.yaml -k --ask-vault-pass
+ssh root@192.168.122.17
+ssh root@192.168.122.17 -p
+ssh root@192.168.122.17 -p toor
+ssh root@192.168.122.17
+ssh root@192.168.122.17 -p 22
+ssh root@192.168.122.17
+ssh root@192.168.122.17 -v
+ansible-playbook playbook_kali.yaml -k --ask-vault-pass
+cd roles/
+ls
+cd firstSetupOthers/
+vim tasks/main.yml 
+ansible-playbook playbook_kali.yaml -k --ask-vault-pass
+pwd
+cd ..
+ansible-playbook playbook_kali.yaml -k --ask-vault-pass
+ssh john1010@192.168.122.17
+ls
+rm playbook_kali.retry 
+ls
+ssh john1010@192.168.122.17
+ssh root@192.168.122.17
+ssh john1010@192.168.122.17 -v
+ls
+ansible-playbook playbook_kali.yaml -k --vault-id vault_pass
 ls
 cd roles/
 ls
-cd vb/
-vim tasks/main.yaml 
+cd firstSetupOthers/
+cd tasks/main.yml 
+vim tasks/main.yml 
+ls
+vim vars/main.yml 
+cd vars/
+ansible-vault edit main.yml 
 cd ..
-ansible-playbook playbook.yaml -K --ask-vault-pass
-VBoxManage --version
-reboot
-sudo reboot
-VBoxManage --version
-su -
 ls
-
-VBoxManage --version
-history
+cd ..
 ls
-VAGRANT_VAGRANTFILE=Vagrantfile_vb vagrant up
-VAGRANT_VAGRANTFILE=Vagrantfile_vb vagrant up --virtualbox
-VAGRANT_VAGRANTFILE=Vagrantfile_vb vagrant up --provider virtualbox
+ansible-playbook playbook_kali.yaml -k --vault-id vault_pass
+vim roles/firstSetupOthers/tasks/main.yml 
+ansible-playbook playbook_kali.yaml -k --vault-id vault_pass
+vim roles/firstSetupOthers/tasks/main.yml 
+ansible-playbook playbook_kali.yaml -k --vault-id vault_pass
+vim roles/firstSetupOthers/tasks/main.yml 
+ansible-playbook playbook_kali.yaml -k --vault-id vault_pass -vvv
+vim roles/firstSetupOthers/tasks/main.yml 
+ansible-playbook playbook_kali.yaml -k --vault-id vault_pass
+vim roles/firstSetupOthers/tasks/main.yml 
+ansible-playbook playbook_kali.yaml -k --vault-id vault_pass
+ssh john1010@192.168.122.17
+ls
+vim playbook_kali.yaml 
+ansible-playbook playbook_kali.yaml -k --vault-id vault_pass
+vim playbook_kali.yaml 
+ansible-playbook playbook_kali.yaml -k --vault-id vault_pass
+vim playbook_kali.yaml 
+ansible-playbook playbook_kali.yaml -k --vault-id vault_pass
+vim playbook_kali.yaml 
+ansible-playbook playbook_kali.yaml
+vim playbook_kali.yaml 
+vim roles/nextstep/tasks/main.yaml 
+vim playbook_kali.yaml 
+ansible-playbook playbook_kali.yaml
+vim roles/nextstep/tasks/main.yaml 
+ansible-playbook playbook_kali.yaml
+vim roles/nextstep/tasks/main.yaml 
+ansible-playbook playbook_kali.yaml
+ls
+cd roles/
+ls
+ansible-galaxy init openvpn
+ls
+cd openvpn/
+ls
+wget -qO - ipv4bot.whatismyipaddress.com
+ls
+vim vars/main.yml 
+vim tasks/main.yml 
+vim vars/main.yml 
+vim tasks/main.yml 
+vim vars/main.yml 
+vim tasks/main.yml 
+cd ..
+ls
+ansible-galaxy init tor_kali
+ls
+cd tor_kali/
+vim vars/main.yml 
+vim tasks/main.yml 
+vim vars/main.yml 
+vim tasks/main.yml 
+vim vars/main.yml 
+vim tasks/main.yml 
+vim vars/main.yml 
+vim tasks/main.yml 
+vim vars/main.yml 
+vim tasks/main.yml 
+cd ..
+;s
+ls
+cd openvpn/
+ls
+cd ..
+ls
+cd tor_kali/
+vim tasks/main.yml 
+vim vars/main.yml 
+ls
+pwd
+cd ..
+cd openvpn/
+ls
+cd templates/
+ls
+vim udp1.j2 
+ls
+mp udp1.j2 udp1_2500.j2
+ls
+mv udp1.j2 udp1_2500.j2
+ls
+cp udp1_2500.j2 udp1_53.j2 
+vim udp1_53.j2 
+ls
+mv udp2.j2 udp2_2500.j2 
+vim udp2_2500.j2 
+cp udp2_2500.j2 udp2_53.j2 
+vim udp2_53.j2 
+ls
+cd ..
+cd ~
+pwd
+git add .
+git add --ignore-removal .
+git commit -m "11052019_1"
+git push origin master
+pwd
+cd project-kali/
+cd roles/
+cd openvpn/
+vim vars/main.yml 
+cd ..
+ls
+cp playbook_kali.yaml playbook_kali_initial.yaml 
+cp playbook_kali.yaml playbook_kali_next.yaml 
+vim playbook_kali_initial.yaml 
+vim playbook_kali_next.yaml 
+vim hosts
+ls
+ansible-playbook playbook_kali_initial.yaml -K --vault-id vault_pass 
+vim playbook_kali_initial.yaml 
+vim playbook_kali_next.yaml 
+ansible-playbook playbook_kali_initial.yaml -K --vault-id vault_pass 
+ssh root@192.168.122.192
+vim playbook_kali_initial.
+vim playbook_kali_initial.yaml 
+ansible-playbook playbook_kali_initial.yaml -k --vault-id vault_pass 
+ssh root@192.168.122.192
+vim hosts 
+ansible-playbook playbook_kali_initial.yaml -k --vault-id vault_pass 
+vim hosts 
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass 
+vim hosts 
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass 
+vim hosts 
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass 
+vim hosts 
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass 
+ssh john1010@192.168.122.192
+ssh root@192.168.122.192
+vim hosts 
+ssh john1010@192.168.122.192
+ssh root@192.168.122.192
+cd roles/
+cd firstSetupOthers/
+vim tasks/main.yml 
+cd ..
+ssh john1010@192.168.122.192
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass 
+vim playbook_kali_next.yaml 
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass 
+vim playbook_kali_next.yaml 
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass 
+vim playbook_kali_next.yaml 
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass 
+vim playbook_kali_next.yaml 
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass 
+vim playbook_kali_next.yaml 
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass 
+vim playbook_kali_next.yaml 
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass 
+vim playbook_kali_next.yaml 
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass 
+vim playbook_kali_next.yaml 
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass 
+vim playbook_kali_next.yaml 
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass 
+vim playbook_kali_next.yaml 
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass 
+vim playbook_kali_next.yaml 
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass 
+vim playbook_kali_next.yaml 
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass 
+vim playbook_kali_next.yaml 
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass 
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass -vvv
+sudo yum install -y python-apt
+pip list | grep python-apt
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass
+pip list | grep python-apt
+vim playbook_kali_next.yaml 
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass
+ls
+cd roles/
+ls
+cd firstSetupOthers/
+vim tasks/main.yml 
+cd ..
+ls
+vim playbook_kali_next.yaml 
+ansible-playbook playbook_kali_next.yaml --vault-id vault_pass
+vim hosts 
+ansible-playbook playbook_kali_initial.yaml -k --vault-id vault_pass 
+vim playbook_kali_initial.yaml 
+vim playbook_kali_next.yaml 
+ansible-playbook playbook_kali_initial.yaml -k --vault-id vault_pass 
+ssh root@192.168.122.227
+ansible-playbook playbook_kali_initial.yaml -k --vault-id vault_pass 
+ls
+ansible-playbook playbook_kali_next.yaml  --vault-id vault_pass 
+sudo virsh list --all
+cd .
+ls
+vim ansible.cfg 
+htop
+cd project-kali/
+ls
+cd roles/
+ls
+cd firstSetupOthers/
+ls
+vim vars/main.yml 
+cd vars/
+ls
+pwd
+ls
+rm vault.yaml 
+ls
+cd ..
+ls
+vim handlers/main.yml 
+vim tasks/main.yml 
+cd vars/
+ansible-vault edit
+ansible-vault edit vault.yml 
+ls
+vim main.yml 
+ansible-vault edit vault.yml 
+vim main.yml 
+ls
+rm vault.yml 
+ansible-vault encrypt main.yml 
+vim main.yml 
+ansible-vault edit main.yml 
+cd ..
+cd templates/
+ls
+vim interface.j2
+ls
+vim resolv.j2
+ls
+cd ..
+vim tasks/main.yml 
+pwd
+sudo virsh list --all
+virt-manager
+sudo virsh stop kali
+virsh -h
+sudo virsh shutdown kali
+sudo virsh list --all
+sudo virsh reboot kali
+sudo virsh list --all
+sudo virsh start kali
+ls
+vim handlers/main.yml 
+vim tasks/main.yml 
+vim handlers/main.yml 
+vim tasks/main.yml 
+mkpasswd --method=sha-512
+yum install -y mkpasswd
+sudo yum install -y mkpasswd
+sudo yum search mkpasswd
+pip install passlib
+python -c "from passlib.hash import sha512_crypt; import getpass; print(sha512_crypt.using(round=5000).hash(getpass.getpass()))"
+python -c "from passlib.hash import sha512_crypt; import getpass; print(sha512_crypt.using(rounds=5000).hash(getpass.getpass()))"
+sudo yum install -y expect
+mkpasswd --method=sha-512
+mkpasswd -h
+mkpasswd -help
+mkpasswd
+cd ..
 cd firstSetup/
 cd roles/
-cd vb
-vim tasks/main.yaml 
-cd project-vagrant/
 ls
-VAGRANT_VAGRANTFILE=Vagrantfile_vb vagrant up
-VAGRANT_VAGRANTFILE=Vagrantfile_vb vagrant up --provider virtualbox
-VAGRANT_VAGRANTFILE=Vagrantfile_vb vagrant up
-vim Vagrantfile_vb 
-vagrant status
-VAGRANT_VAGRANTFILE=Vagrantfile_vb vagrant up
-vagrant status
-vagrant status all
-vagrant status --all
-vagrant status -all
-vagrant status
-vagrant up centos01
-vagrant status
-vim Vagrantfile_vb 
-VAGRANT_VAGRANTFILE=Vagrantfile_vb vagrant up
-vim Vagrantfile_vb 
-vagrant status
-vagrant stop centos01
-vagrant suspend centos01
+cd firstsetup
 ls
-cp Vagrantfile Vagrantfile_libvirt
-vim Vagrantfile
-vagrant reload
-vim Vagrantfile
-vagrant reload
-vagrant status
-vagrant destroy
-vagrant up
-VAGRANT_VAGRANTFILE=Vagrantfile vagrant up
+mkdir vars
+cd vars/
+vim main.yaml
 ls
-vim VagrantfileCentos 
+ansible-vault encrypt mail.yaml
 ls
-vim Vagrantfile
-vagrant -h
-vagrant global-status
-vagrant destroy debian01 debian02 centos01 centos02
-vagrant 77ed09a d91ebfc
-vagrant global-status
-vagrant destroy 77ed09a
-vagrant global-status
-vagrant init
+ansible-vault encrypt main.yaml
+ls
+pwd
+cd ..
+cd .
+cd ..
 ls
 ls -lah
-cd .vagrant/
+cd .ssh/
 ls
-cd machines/
+cat id_rsa.pub 
+cd ..
+pwd
 ls
-rm -rf centos01 centos02
+cd /home/ansibleuser1/
 ls
-rm -rf debian01 debian02 default server02/ test_vm2 test_vm3
+ssh john1010@192.168.122.17
+ls
+cd firstSetup/
+ls
+cd roles/
+ls
+cp -r nextstep/ /home/ansibleuser1/project-kali/roles/
+cd ..
+ls
+ssh john1010@192.168.122.17
+ssh root@192.168.122.17
+pwd
+ls
+vim .gitignore_global 
+ls
+cd project-kali/
+ls
+vim 1.txt 
+cd ..
+ls
+cd Downloads/
+ls
+unzip stapesa_conf.zip 
+ls
+co user* /home/ansibleuser1/project-kali/roles/openvpn/files
+cp user* /home/ansibleuser1/project-kali/roles/openvpn/files
 ls
 cd ..
 ls
-cd provisioners/
-ls
-cd ansible/
-ls
-cd inventory/
-ls
-cat vagrant_ansible_inventory 
-rm vagrant_ansible_inventory 
-ls
-cd ..
-ls
-cd ..
-ls
-vagrant global-status
-vagrant up
-vagrant -h
-vagrant global-status --prune
-vagrant global-status
-vagrant up
-vagrant status
-vagrant destroy default
-vagrant global-status
-/sbin/vboxconfig
-sudo /sbin/vboxconfig
-vim Vagrantfile
-vagrant global-status
-vagrant up
-ls
-ls -lah
-rm -rm .vagrant/
-rm -rf .vagrant/
-ls -lah
-vagrant status
-vagrant destroy default
-ls -lah
-rm -rf .vagrant/
-vagrant global-status
-cp Vagrantfile ../project-vagrant-vb/
-cp playbooy* ../project-vagrant-vb/
-cp playbook* ../project-vagrant-vb/
-ls
-vim Vagrantfile
-ls
-mv Vagrantfile Vagrantfile_old
-mv Vagrantfile_libvirt Vagrantfile
-vim Vagrantfile
-vagrant up
-vagrant global-status --prune
-vagrant status
-vagrant up
-vagrant status
-vagrant up centos01
-virsh list --all
-sudo virsh list --all
-sudo virsh destroy all
-sudo virsh destroy --all
-sudo virsh destroy project-vagrant_centos01
-sudo virsh destroy project-vagrant_centos03
-sudo virsh destroy project-vagrant_centos02
-sudo virsh list --all
-virsh --prune
-sudo virsh undefine project-vagrant_centos01
-sudo virsh undefine project-vagrant_centos02
-sudo virsh list --all
-sudo virsh undefine project-vagrant_debian01
-sudo virsh undefine project-vagrant_debian02
-sudo virsh list --all
-ls
-vagrant up
-rm -rf .vagrant/
-cd ..
-cd project-vagrant-vb/
-ls
-cd ..
-cd project-vagrant
-ls
-vagrant up
-vim Vagrantfile
-vagrant up
-vagrant box add centos/7 debian/stretch64
-vagrant box add centos/7
-vagrant box add debian/stretch64
-vagrant status
-vagrant up centos01
-vagrant box -list
-vagrant box list
-vagrant up -h
-vagrant up centos02
-vagrant status
-ls
-cd ..
-ls
-sudo ls /root
+cd project-kali/
+cd roles/
+cd openvpn/
+cd files/
 ls
 cd ~
 ls
-ls -lah
-cd ISO/
+cd .ssh/
 ls
+cat id_rsa.pub 
 cd ..
 ls
-rm ISO/
-rm -r ISO/
-ls
-ls -lah
-cd .vagrant.d/
-ls
-vim setup_version 
-ls
-cd data/
-ls
-cd ..
-ls
-rm -rf data/
-rm -rf boxes/
-cd ..
-ls
-cd ISO/
-ls
-cd firstSetup/
+cd project-kali/
 cd roles/
-cd vb
-cd tasks/main.yaml 
-vim tasks/main.yaml 
-ip addr show
-cd ..
-ls
-cd project-vagrant/
-vim Vagrantfile_vb 
-cd ..
-ls
-mkdir project-vagrant-vb
-ls
-cd project-vagrant-vb/
-ls
-ls -lah
-vagrant up
-vagrant destroy default
-vim Vagrantfile 
-ls -lah
-rm -rf .vagrant/
-vagrant global-status
-vagrant up
-vim Vagrantfile 
-vagrant box add centos/7
-vagrant box add debain/strech64
-vagrant box add debian/stretch64
-vagrant box add offensive-security/kali-linux
-vagrant up
-vagrant global-status
-cd ..
-ls
-cd ansibleuser1/
-ls -lah
-sudo virsh list
-which virtualbox 
-sudo yum remove VirtualBox5.1
-sudo yum remove VirtualBox
-sudo yum remove Virtualbox
-sudo yum remove Virtualbox5.1.38
-sudo yum remove Virtualbox5.1
-sudo yum remove Virtualbox
-which virtualbox
-virtualbox
-sudo yum remove Virtualbox
-sudo yum remove virtualbox
-sudo yum remove virtualbox5.1
-sudo yum remove virtualbox5.1.38
-sudo yum remove virtualbox5.1
-yum search virtualbox
-sudo yum remove -y VirtualBox-5.1
-ls
-virtualbox
-cd .vagrant.d/
-ls
-cd boxes/
-ls
-rm -rf centos-VAGRANTSLASH-7/ debian-VAGRANTSLASH-stretch64/ offensive-security-VAGRANTSLASH-kali-linux/
-ls
-cd ..
-ls
-cd tmp/
-ls
-cd ..
-ls
-cd firstSetup/roles/
-ls
-cd kvm/
-vim vars/main.yaml 
-ls
-cd ..
-ls
-cd kvm/
-vim vars/main.yaml 
-vim tasks/main.yaml 
-VBoxManage --version
-cd firstSetup/
-ansible-playbook playbook.yaml -K --ask-vault-pass
-virtualbox
-yum remove virtualbox
-sudo yum remove virtualbox
-sudo yum --purge virtualbox*
-sudo yum remove virtualbox*
-sudo yum remove VirtualBox-6.0
-ansible-playbook playbook.yaml -K --ask-vault-pass
-VBoxManage --version
-sudo /sbin/vboxconfig
-ansible-playbook playbook.yaml -K --ask-vault-pass
-VBoxManage --version
-sudo /sbin/vboxconfig
-VBoxManage --version
-ansible-playbook playbook.yaml -K --ask-vault-pass
-VBoxManage --version
-ls
-ls -lah
-cd ..
-ls
-ls -lah
-cd .vagrant.d/
-ls
-cd boxes/
-ls
-rm -rf debian-VAGRANTSLASH-stretch64/ offensive-security-VAGRANTSLASH-kali-linux/
-ls
-cd ..
-ls
-cd gems/
-ls
-cd ..
-ls
-cd data/
-ls
-cd ..
-cd ll
-cd ..
-ls
-ls -lah
-cd VirtualBox\ VMs/
-ls
-cd ..
-vim .gitignore_global 
-cd firstSetup/
-ls
-vim playbook.yaml 
-cd roles/
-ls
-mv vagrant_only/ vagrant/
-ls
-cp -r vagrant/ kvm/
-cd kvm/
-ls
-vim tasks/main.yaml 
-cd ..
-vim playbook.yaml 
-ansible-playbook --check playbook.yaml 
-ansible-playbook playbook.yaml -K --ask-vault-pass 
-vim playbook.yaml 
-ansible-playbook playbook.yaml -K --ask-vault-pass 
-virt-manager
-sudo virt-manager
-sudo pip uninstall requests urllib3
-sudo pip install requests
-virt-manager
-sudo pip upgrade requests
-sudo pip --upgrade requests
-sudo pip install requests
-pip install --upgrade pip
-sudo pip install --upgrade pip
-sudo pip install requests
-virt-manager
-sudo pip3 install requests
-sudo pip install requests
-virt-manager
-sudo pip install urllib3==1.22
-virt-manager
-sudo pip install requests
-sudo pip uninstall requests
-sudo pip install requests==2.2.1
-sudo pip search urllib3
-sudo pip install urllib3==1.25.2
-sudo pip search requests
-sudo pip install requests==2.21.0
-virt-manager
-sudo yum search virt-manager
-reboot
-sudo yum install https://resources.ovirt.org/pub/yum-repo/ovirt-release43.rpm
-sudo yum install -y ovirt-engine
-sudo engine-setup
+vim nextstep/tasks/main.yaml 
+vim nextstep/handlers/main.yaml 
+vim nextstep/tasks/main.yaml 
+vim firstSetupOthers/tasks/main.yaml 
 pwd
-wget https://cnd.ispsystem.com/install.sh
-wget https://cdn.ispsystem.com/install.sh
-ls
-wget "http://cdn.ispsystem.com/install.sh"
-ls
-sh install.sh
-sudo sh install.sh 
-sudo yum install https://resources.ovirt.org/pub/yum-repo/ovirt-release43.rpm
-sudo yum install -y ovirt-engine
-sudo engine-setup
-pwd
-wget https://cnd.ispsystem.com/install.sh
-wget https://cdn.ispsystem.com/install.sh
-ls
-wget "http://cdn.ispsystem.com/install.sh"
-ls
-sh install.sh
-sudo sh install.sh 
-virt-manager
-virsh list --all
-sudo pip install requests==2.26.0
-sudo pip install requests==2.25.0
-sudo pip install requests==2.21.0
-sudo pip uninstall requests==2.6.0 
-sudo pip install requests==2.19.0
-virt-manager
+vim firstSetupOthers/tasks/main.yml 
+ssh john1010@192.168.122.227
+git add --ignore-removal .
+git commit -m "12052019_v1"
+git push origin master
+sudo killall ovirt*
+sudo killall ovirt-engine-dwhd
+killall ovirt
+sudo virsh suspend kali
+sudo virsh list --all
+sudo virsh shutdown kali
+sudo virsh resume kali
+sudo virsh list --all
+sudo virsh shutdown kali
+sudo virsh list --all
+sudo virsh shutdown kali
+sudo virsh list --all
+ssh john1010@192.168.122.17
+sudo virsh list --all
+sudo apt-get search ovirt
+sudo reboot

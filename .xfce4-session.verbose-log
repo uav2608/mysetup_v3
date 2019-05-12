@@ -48,103 +48,82 @@ TRACE[sm-layer.c:162] sm_new_client(): ICE connection fd = 13, received NEW CLIE
 
 TRACE[sm-layer.c:213] sm_register_client(): ICE connection fd = 13, received REGISTER CLIENT [Previous Id = None]
 
-TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (Program, xfce4-panel)
-TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (UserID, ansibleuser1)
-TRACE[xfsm-properties.c:555] xfsm_properties_set_uchar(): -> Set uchar (RestartStyleHint, 2)
-TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (ProcessID, 14529)
-TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (CurrentDirectory, /home/ansibleuser1)
-TRACE[xfsm-properties.c:555] xfsm_properties_set_uchar(): -> Set uchar (_GSM_Priority, 25)
 TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (Program, xfsettingsd)
 TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (UserID, ansibleuser1)
 TRACE[xfsm-properties.c:555] xfsm_properties_set_uchar(): -> Set uchar (RestartStyleHint, 2)
-TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (ProcessID, 14532)
+TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (ProcessID, 16247)
 TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (CurrentDirectory, /home/ansibleuser1)
 TRACE[xfsm-properties.c:555] xfsm_properties_set_uchar(): -> Set uchar (_GSM_Priority, 25)
 TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (_GSM_DesktopFile, /etc/xdg/autostart/xfsettingsd.desktop)
-TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (RestartCommand)
-TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (CloneCommand)
-TRACE[sm-layer.c:304] sm_save_yourself_done(): Client Id = 29e310da7-990f-486e-8be8-1726b047c80c, received SAVE YOURSELF DONE [Success = True]
-
-TRACE[xfsm-manager.c:1295] xfsm_manager_save_yourself_done(): enteringTRACE[sm-layer.c:162] sm_new_client(): ICE connection fd = 14, received NEW CLIENT
+TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (Program, xfce4-panel)
+TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (UserID, ansibleuser1)
+TRACE[xfsm-properties.c:555] xfsm_properties_set_uchar(): -> Set uchar (RestartStyleHint, 2)
+TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (ProcessID, 16243)
+TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (CurrentDirectory, /home/ansibleuser1)
+TRACE[xfsm-properties.c:555] xfsm_properties_set_uchar(): -> Set uchar (_GSM_Priority, 25)
+TRACE[sm-layer.c:162] sm_new_client(): ICE connection fd = 14, received NEW CLIENT
 
 TRACE[sm-layer.c:213] sm_register_client(): ICE connection fd = 14, received REGISTER CLIENT [Previous Id = None]
 
-TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (Program, xfdesktop)
+TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (Program, xfce4-power-manager)
 TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (UserID, ansibleuser1)
-TRACE[xfsm-properties.c:555] xfsm_properties_set_uchar(): -> Set uchar (RestartStyleHint, 2)
-TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (ProcessID, 14534)
-TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (CurrentDirectory, /home/ansibleuser1)
-TRACE[xfsm-properties.c:555] xfsm_properties_set_uchar(): -> Set uchar (_GSM_Priority, 35)
+TRACE[xfsm-properties.c:555] xfsm_properties_set_uchar(): -> Set uchar (RestartStyleHint, 0)
+TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (ProcessID, 16257)
+TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (CurrentDirectory, /)
+TRACE[xfsm-properties.c:555] xfsm_properties_set_uchar(): -> Set uchar (_GSM_Priority, 50)
+TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (_GSM_DesktopFile, /etc/xdg/autostart/xfce4-power-manager.desktop)
 TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (RestartCommand)
 TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (CloneCommand)
-TRACE[sm-layer.c:304] sm_save_yourself_done(): Client Id = 29ef827e0-e285-44e8-b334-87794e4a7722, received SAVE YOURSELF DONE [Success = True]
+TRACE[sm-layer.c:304] sm_save_yourself_done(): Client Id = 21b4189d1-2937-487c-a301-d56b7aabca80, received SAVE YOURSELF DONE [Success = True]
 
 TRACE[xfsm-manager.c:1295] xfsm_manager_save_yourself_done(): enteringTRACE[sm-layer.c:162] sm_new_client(): ICE connection fd = 15, received NEW CLIENT
 
 TRACE[sm-layer.c:213] sm_register_client(): ICE connection fd = 15, received REGISTER CLIENT [Previous Id = None]
 
-TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (Program, xfce4-power-manager)
+TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (Program, xfdesktop)
 TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (UserID, ansibleuser1)
-TRACE[xfsm-properties.c:555] xfsm_properties_set_uchar(): -> Set uchar (RestartStyleHint, 0)
-TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (ProcessID, 14543)
-TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (CurrentDirectory, /)
-TRACE[xfsm-properties.c:555] xfsm_properties_set_uchar(): -> Set uchar (_GSM_Priority, 50)
-TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (_GSM_DesktopFile, /etc/xdg/autostart/xfce4-power-manager.desktop)
-TRACE[sm-layer.c:162] sm_new_client(): ICE connection fd = 16, received NEW CLIENT
+TRACE[xfsm-properties.c:555] xfsm_properties_set_uchar(): -> Set uchar (RestartStyleHint, 2)
+TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (ProcessID, 16248)
+TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (CurrentDirectory, /home/ansibleuser1)
+TRACE[xfsm-properties.c:555] xfsm_properties_set_uchar(): -> Set uchar (_GSM_Priority, 35)
+TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (RestartCommand)
+TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (CloneCommand)
+TRACE[sm-layer.c:304] sm_save_yourself_done(): Client Id = 20e4d3385-d96a-4b7e-990e-ba66e3fbe8b8, received SAVE YOURSELF DONE [Success = True]
+
+TRACE[xfsm-manager.c:1295] xfsm_manager_save_yourself_done(): enteringTRACE[sm-layer.c:162] sm_new_client(): ICE connection fd = 16, received NEW CLIENT
 
 TRACE[sm-layer.c:213] sm_register_client(): ICE connection fd = 16, received REGISTER CLIENT [Previous Id = None]
 
 TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (Program, xfwm4)
 TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (UserID, ansibleuser1)
 TRACE[xfsm-properties.c:555] xfsm_properties_set_uchar(): -> Set uchar (RestartStyleHint, 2)
-TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (ProcessID, 14525)
+TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (ProcessID, 16239)
 TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (CurrentDirectory, /home/ansibleuser1)
 TRACE[xfsm-properties.c:555] xfsm_properties_set_uchar(): -> Set uchar (_GSM_Priority, 15)
 TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (RestartCommand)
 TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (CloneCommand)
-TRACE[sm-layer.c:304] sm_save_yourself_done(): Client Id = 217c53b2a-1a82-4616-a31e-9d496eccd616, received SAVE YOURSELF DONE [Success = True]
+TRACE[sm-layer.c:304] sm_save_yourself_done(): Client Id = 20d65c025-3c59-44c8-8a8a-cd306c627c6d, received SAVE YOURSELF DONE [Success = True]
 
 TRACE[xfsm-manager.c:1295] xfsm_manager_save_yourself_done(): enteringTRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (RestartCommand)
 TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (CloneCommand)
-TRACE[sm-layer.c:304] sm_save_yourself_done(): Client Id = 234b46e16-3826-4998-b9ab-6456116b25dd, received SAVE YOURSELF DONE [Success = True]
-
-TRACE[xfsm-manager.c:1295] xfsm_manager_save_yourself_done(): enteringTRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (RestartCommand)
-TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (CloneCommand)
-TRACE[sm-layer.c:304] sm_save_yourself_done(): Client Id = 2b5110afa-7c8c-4db8-9833-0c553302e1e1, received SAVE YOURSELF DONE [Success = True]
+TRACE[sm-layer.c:304] sm_save_yourself_done(): Client Id = 224a6d3a9-b110-4422-b61d-f689c42abbf8, received SAVE YOURSELF DONE [Success = True]
 
 TRACE[xfsm-manager.c:1295] xfsm_manager_save_yourself_done(): enteringTRACE[sm-layer.c:162] sm_new_client(): ICE connection fd = 17, received NEW CLIENT
 
 TRACE[sm-layer.c:213] sm_register_client(): ICE connection fd = 17, received REGISTER CLIENT [Previous Id = None]
 
-TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (RestartCommand)
-TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (CloneCommand)
-TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (Program, firefox)
-TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (UserID, ansibleuser1)
-TRACE[sm-layer.c:304] sm_save_yourself_done(): Client Id = 25f04e5d9-103a-4ddc-bb04-3659e163a823, received SAVE YOURSELF DONE [Success = True]
-
-TRACE[xfsm-manager.c:1295] xfsm_manager_save_yourself_done(): enteringTRACE[sm-layer.c:162] sm_new_client(): ICE connection fd = 18, received NEW CLIENT
-
-TRACE[sm-layer.c:213] sm_register_client(): ICE connection fd = 18, received REGISTER CLIENT [Previous Id = None]
-
 TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (Program, xfce4-terminal)
 TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (UserID, ansibleuser1)
 TRACE[xfsm-properties.c:555] xfsm_properties_set_uchar(): -> Set uchar (RestartStyleHint, 0)
-TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (ProcessID, 16394)
+TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (ProcessID, 16320)
 TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (CurrentDirectory, /home/ansibleuser1)
 TRACE[xfsm-properties.c:555] xfsm_properties_set_uchar(): -> Set uchar (_GSM_Priority, 50)
 TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (_GSM_DesktopFile, /usr/share/applications/xfce4-terminal.desktop)
 TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (CloneCommand)
-TRACE[sm-layer.c:304] sm_save_yourself_done(): Client Id = 2fe881b9e-4795-4bb7-b1f9-6010f5403734, received SAVE YOURSELF DONE [Success = True]
+TRACE[sm-layer.c:304] sm_save_yourself_done(): Client Id = 20fad8592-da6c-4b8e-89bb-6a9f68cdde42, received SAVE YOURSELF DONE [Success = True]
 
-TRACE[xfsm-manager.c:1295] xfsm_manager_save_yourself_done(): enteringTRACE[xfsm-manager.c:428] xfsm_manager_handle_failed_properties(): Client Id 25f04e5d9-103a-4ddc-bb04-3659e163a823 exited, removing from session.
-TRACE[sm-layer.c:162] sm_new_client(): ICE connection fd = 17, received NEW CLIENT
-
-TRACE[sm-layer.c:213] sm_register_client(): ICE connection fd = 17, received REGISTER CLIENT [Previous Id = None]
-
-TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (RestartCommand)
+TRACE[xfsm-manager.c:1295] xfsm_manager_save_yourself_done(): enteringTRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (RestartCommand)
 TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (CloneCommand)
-TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (Program, firefox)
-TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (UserID, ansibleuser1)
-TRACE[sm-layer.c:304] sm_save_yourself_done(): Client Id = 27d5f547a-75b8-4068-b057-613a874afdc1, received SAVE YOURSELF DONE [Success = True]
+TRACE[sm-layer.c:304] sm_save_yourself_done(): Client Id = 210dd3bac-a088-439b-9eee-b357a7e61325, received SAVE YOURSELF DONE [Success = True]
 
 TRACE[xfsm-manager.c:1295] xfsm_manager_save_yourself_done(): entering

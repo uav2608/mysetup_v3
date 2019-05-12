@@ -11,10 +11,12 @@
 ~MSle0~/os_family
 
 # Command Line History (newest to oldest):
-:wq
-:sa
-:set number
 :q!
+:wq
+:set number
+:Q!
+:q1
+:sa
 :no hug
 :ew
 :WQ
@@ -30,41 +32,89 @@
 # Input Line History (newest to oldest):
 
 # Registers:
-"1	LINE	0
-	    when: "{{ with4k }}" == "True"
+""1	LINE	0
+	  config.vm.define "centosserver" do |centosserver|
 "2	LINE	0
-	myipaddress4k      : "{{ USCH.4k }}"
+	
 "3	LINE	0
 	
 "4	LINE	0
-	#  when: myipaddress4k == False  
+	
 "5	LINE	0
-	    mode: 0644
+	
 "6	LINE	0
-	    dest: /etc/openvpn/client/udp53_{{openvpn_name}}.conf
+	
 "7	LINE	0
-	    src: udp2_53.j2
+	  config.vm.synced_folder ".", "/vagrant", type: "rsync"
 "8	LINE	0
-	  template:
+	  config.vm.box = "debian/stretch64"
 "9	LINE	0
-	- name: copy tempate of UDP without 4k conf
-""-	CHAR	0
-	2
+	  config.vm.define "centosserver" do |centosserver|
+"-	CHAR	0
+	centos
 
 # File marks:
-'0  22  29  ~/project-kali/roles/openvpn/vars/main.yml
-'1  62  29  ~/project-kali/roles/openvpn/tasks/main.yml
-'2  76  37  ~/project-kali/roles/openvpn/tasks/main.yml
-'3  47  15  ~/project-kali/roles/openvpn/tasks/main.yml
-'4  1  2  ~/project-kali/roles/openvpn/vars/main.yml
-'5  16  0  ~/project-kali/roles/openvpn/tasks/main.yml
-'6  91  0  ~/project-kali/roles/openvpn/tasks/main.yml
-'7  15  24  ~/project-kali/roles/openvpn/tasks/main.yml
-'8  8  0  ~/project-kali/roles/openvpn/vars/main.yml
-'9  15  0  ~/project-kali/roles/openvpn/vars/main.yml
+'0  5  0  ~/firstSetup/playbook_dev.yaml
+'1  8  0  ~/firstSetup/playbook_dev_IDE.yaml
+'2  22  0  ~/firstSetup/playbook_kali.yaml
+'3  1  0  ~/firstSetup/playbook.yaml
+'4  1  7  ~/project-vagrant/VagrantfileOld
+'5  10  0  ~/project-vagrant/Vagrantfile_old
+'6  1  0  ~/project-vagrant/Vagrantfile_vb
+'7  40  0  ~/project-vagrant/VagrantfileDebian
+'8  35  0  ~/project-vagrant/VagrantfileCentos
+'9  13  0  ~/project-vagrant/Vagrantfile
 
 # Jumplist (newest first):
--'  22  29  ~/project-kali/roles/openvpn/vars/main.yml
+-'  5  0  ~/firstSetup/playbook_dev.yaml
+-'  8  0  ~/firstSetup/playbook_dev_IDE.yaml
+-'  1  0  ~/firstSetup/playbook_dev_IDE.yaml
+-'  1  0  ~/firstSetup/playbook_dev.yaml
+-'  22  0  ~/firstSetup/playbook_kali.yaml
+-'  1  0  ~/firstSetup/playbook_kali.yaml
+-'  1  0  ~/firstSetup/playbook.yaml
+-'  1  7  ~/project-vagrant/VagrantfileOld
+-'  10  0  ~/project-vagrant/Vagrantfile_old
+-'  1  0  ~/project-vagrant/Vagrantfile_old
+-'  1  0  ~/project-vagrant/Vagrantfile_vb
+-'  40  0  ~/project-vagrant/VagrantfileDebian
+-'  1  0  ~/project-vagrant/VagrantfileDebian
+-'  35  0  ~/project-vagrant/VagrantfileCentos
+-'  1  0  ~/project-vagrant/VagrantfileCentos
+-'  13  0  ~/project-vagrant/Vagrantfile
+-'  69  0  ~/project-vagrant/Vagrantfile
+-'  68  2  ~/project-vagrant/Vagrantfile
+-'  70  0  ~/project-vagrant/Vagrantfile
+-'  44  10  ~/project-vagrant/Vagrantfile
+-'  32  4  ~/project-vagrant/Vagrantfile
+-'  1  0  ~/project-vagrant/Vagrantfile
+-'  3  13  ~/project-kali/playbook_kali_next.yaml
+-'  11  0  ~/project-kali/playbook_kali_next.yaml
+-'  2  13  ~/project-kali/playbook_kali_initial.yaml
+-'  6  13  ~/project-kali/hosts
+-'  6  19  ~/project-kali/ansible.cfg
+-'  1  0  ~/project-kali/ansible.cfg
+-'  52  13  ~/project-kali/roles/firstSetupOthers/tasks/main.yml
+-'  53  5  ~/project-kali/roles/firstSetupOthers/tasks/main.yml
+-'  1  0  ~/project-kali/roles/firstSetupOthers/tasks/main.yaml
+-'  6  0  ~/project-kali/roles/nextstep/tasks/main.yaml
+-'  1  0  ~/project-kali/roles/nextstep/tasks/main.yaml
+-'  9  6  ~/project-kali/playbook_kali_next.yaml
+-'  1  0  ~/project-kali/roles/nextstep/handlers/main.yaml
+-'  12  0  ~/project-kali/playbook_kali_next.yaml
+-'  38  0  ~/project-kali/roles/firstSetupOthers/tasks/main.yml
+-'  1  0  ~/project-kali/roles/firstSetupOthers/tasks/main.yml
+-'  1  0  ~/project-kali/playbook_kali_initial.
+-'  16  4  ~/project-kali/playbook_kali_next.yaml
+-'  7  0  ~/project-kali/playbook_kali_initial.yaml
+-'  3  0  ~/project-kali/hosts
+-'  1  0  ~/project-kali/playbook_kali_next.yaml
+-'  1  0  ~/project-kali/playbook_kali_initial.yaml
+-'  37  2  ~/project-kali/roles/openvpn/vars/main.yml
+-'  22  0  ~/project-kali/roles/openvpn/vars/main.yml
+-'  1  0  ~/project-kali/hosts
+-'  2  0  ~/project-kali/playbook_kali.yaml
+-'  1  0  ~/project-kali/playbook_kali.yaml
 -'  62  29  ~/project-kali/roles/openvpn/tasks/main.yml
 -'  76  4  ~/project-kali/roles/openvpn/tasks/main.yml
 -'  1  0  ~/project-kali/roles/openvpn/vars/main.yml
@@ -113,66 +163,200 @@
 -'  1  0  ~/Downloads/ShadeYouVPN.com USA-3 Los Angeles UDP-53.ovpn
 -'  10  0  ~/Downloads/ShadeYouVPN.com USA-3 Los Angeles UDP-25000.ovpn
 -'  1  0  ~/Downloads/ShadeYouVPN.com USA-3 Los Angeles UDP-25000.ovpn
--'  1  0  ~/Downloads/ShadeYouVPN.com
--'  7  0  ~/project-kali/1.txt
--'  1  0  ~/project-kali/1.txt
--'  13  2  ~/project-kali/roles/tor_kali/vars/main.yml
--'  1  0  ~/project-kali/roles/tor_kali/tasks/main.yml
--'  28  2  ~/project-kali/roles/tor_kali/tasks/main.yml
--'  40  10  ~/project-kali/roles/openvpn/tasks/main.yml
--'  45  0  ~/project-kali/roles/openvpn/tasks/main.yml
--'  14  0  ~/project-kali/playbook_kali.yaml
--'  32  0  ~/project-kali/roles/openvpn/tasks/main.yml
--'  3  0  ~/project-kali/roles/openvpn/files/myip.sh
--'  1  0  ~/project-kali/roles/openvpn/files/myip.sh
--'  33  0  ~/project-kali/roles/tor_kali/tasks/main.yml
--'  31  4  ~/project-kali/roles/tor_kali/tasks/main.yml
--'  25  4  ~/project-kali/roles/tor_kali/tasks/main.yml
--'  7  2  ~/project-kali/roles/tor_kali/vars/main.yml
--'  34  0  ~/project-kali/roles/tor_kali/tasks/main.yml
--'  9  0  ~/project-kali/roles/tor_kali/tasks/main.yml
--'  11  2  ~/project-kali/roles/tor_kali/vars/main.yml
--'  6  4  ~/project-kali/roles/tor_kali/tasks/main.yml
--'  12  0  ~/project-kali/roles/tor_kali/tasks/main.yml
--'  13  4  ~/project-kali/roles/tor_kali/tasks/main.yml
--'  7  4  ~/project-kali/roles/tor_kali/tasks/main.yml
--'  15  4  ~/project-kali/playbook_kali.yaml
--'  16  4  ~/project-kali/roles/tor_kali/tasks/main.yml
--'  1  0  ~/project-kali/roles/tor_kali/vars/main.yml
--'  13  0  ~/project-kali/playbook_kali.yaml
--'  18  9  ~/.gitignore_global
--'  1  0  ~/.gitignore_global
--'  14  4  ~/project-kali/roles/openvpn/tasks/main.yml
--'  6  2  ~/project-kali/roles/openvpn/vars/main.yml
--'  46  0  ~/project-kali/roles/openvpn/tasks/main.yml
--'  12  4  ~/project-kali/roles/openvpn/tasks/main.yml
--'  4  0  ~/project-kali/roles/openvpn/tasks/main.yml
--'  8  4  ~/project-kali/roles/openvpn/tasks/main.yml
--'  7  0  ~/project-kali/playbook_kali.yaml
--'  1  0  ~/project-kali/roles/openvpn/tasks/main.yml
--'  14  15  ~/project-kali/roles/nextstep/tasks/main.yaml
--'  10  6  ~/project-kali/roles/nextstep/tasks/main.yaml
--'  1  0  ~/project-kali/roles/nextstep/tasks/main.yaml
--'  6  0  ~/project-kali/playbook_kali.yaml
--'  10  2  ~/project-kali/playbook_kali.yaml
--'  12  2  ~/project-kali/playbook_kali.yaml
--'  8  0  ~/project-kali/playbook_kali.yaml
--'  38  0  ~/project-kali/roles/firstSetupOthers/tasks/main.yml
--'  37  0  ~/project-kali/roles/firstSetupOthers/tasks/main.yml
--'  20  6  ~/project-kali/roles/firstSetupOthers/tasks/main.yml
--'  32  0  ~/project-kali/roles/firstSetupOthers/tasks/main.yml
 
 # History of marks within files (newest to oldest):
 
+> ~/firstSetup/playbook_dev.yaml
+	"	5	0
+
+> ~/firstSetup/playbook_dev_IDE.yaml
+	"	8	0
+	^	8	1
+	.	8	0
+	+	6	0
+	+	7	0
+	+	8	0
+
+> ~/firstSetup/playbook_kali.yaml
+	"	22	0
+
+> ~/firstSetup/playbook.yaml
+	"	1	0
+	^	1	1
+	.	21	0
+	+	22	0
+	+	23	0
+	+	25	0
+	+	21	0
+
+> ~/project-vagrant/VagrantfileOld
+	"	1	7
+	^	1	8
+	.	33	8
+	+	32	2
+	+	33	2
+	+	32	8
+	+	33	8
+
+> ~/project-vagrant/Vagrantfile_old
+	"	10	0
+
+> ~/project-vagrant/Vagrantfile_vb
+	"	1	0
+
+> ~/project-vagrant/VagrantfileDebian
+	"	40	0
+
+> ~/project-vagrant/VagrantfileCentos
+	"	35	0
+
+> ~/project-vagrant/Vagrantfile
+	"	13	0
+	^	69	3
+	.	56	10
+	+	32	49
+	+	32	16
+	+	32	17
+	+	32	17
+	+	32	5
+	+	33	8
+	+	35	38
+	+	37	0
+	+	35	12
+	+	36	12
+	+	37	12
+	+	39	0
+	+	57	0
+	+	56	0
+	+	54	7
+	+	56	7
+	+	58	0
+	+	54	12
+	+	56	12
+	+	54	0
+	+	32	0
+	+	49	0
+	+	54	0
+	+	55	0
+	+	49	0
+	+	68	0
+	+	62	44
+	+	70	0
+	+	49	4
+	+	68	4
+	+	35	9
+	+	36	9
+	+	35	10
+	+	36	10
+	+	37	10
+	+	54	7
+	+	55	7
+	+	54	9
+	+	55	9
+	+	54	10
+	+	55	10
+	+	56	10
+
+> ~/project-kali/playbook_kali_next.yaml
+	"	3	13
+	^	3	14
+	.	3	13
+	+	2	0
+	+	14	0
+	+	16	0
+	+	3	13
+	+	12	0
+	+	9	85
+	+	11	11
+	+	9	43
+	+	11	12
+	+	9	99
+	+	9	126
+	+	11	12
+	+	9	67
+	+	10	45
+	+	3	13
+	+	7	0
+	+	8	0
+	+	9	0
+	+	10	0
+	+	11	0
+	+	3	13
+
+> ~/project-kali/playbook_kali_initial.yaml
+	"	2	13
+	^	2	14
+	.	2	14
+	+	2	0
+	+	3	0
+	+	4	0
+	+	5	0
+	+	6	0
+	+	8	0
+	+	2	14
+
+> ~/project-kali/hosts
+	"	6	13
+	^	6	14
+	.	6	13
+	+	3	36
+	+	4	7
+	+	6	36
+	+	4	5
+	+	6	16
+	+	4	0
+	+	5	5
+	+	6	13
+
+> ~/project-kali/ansible.cfg
+	"	6	19
+	^	6	20
+	.	4	19
+	+	6	24
+	+	5	19
+	+	6	19
+	+	4	19
+
+> ~/project-kali/roles/firstSetupOthers/tasks/main.yml
+	"	52	13
+	^	52	14
+	.	52	14
+	+	50	0
+	+	51	0
+	+	52	0
+	+	53	0
+	+	50	18
+	+	52	14
+	+	53	17
+	+	52	14
+
+> ~/project-kali/roles/firstSetupOthers/tasks/main.yaml
+	"	1	0
+
+> ~/project-kali/roles/nextstep/tasks/main.yaml
+	"	6	0
+	.	6	0
+	+	6	0
+	+	2	24
+	+	6	25
+	+	7	0
+	+	6	0
+	+	4	19
+	+	2	0
+	+	3	0
+	+	4	0
+	+	6	0
+
+> ~/project-kali/roles/nextstep/handlers/main.yaml
+	"	1	0
+
+> ~/project-kali/playbook_kali_initial.
+	"	1	0
+
 > ~/project-kali/roles/openvpn/vars/main.yml
-	"	22	29
-	^	22	30
+	"	37	2
+	^	22	29
 	.	22	29
-	+	40	0
-	+	42	0
-	+	43	0
-	+	44	0
-	+	45	0
 	+	46	0
 	+	47	0
 	+	49	0
@@ -268,257 +452,8 @@
 	+	20	28
 	+	21	28
 	+	22	29
-
-> ~/project-kali/roles/openvpn/tasks/main.yml
-	"	62	29
-	^	62	30
-	.	62	30
-	+	67	0
-	+	68	0
-	+	69	0
-	+	70	0
-	+	71	0
-	+	15	24
-	+	4	0
-	+	5	0
-	+	6	0
-	+	7	0
-	+	8	0
-	+	24	17
-	+	25	0
-	+	26	0
-	+	27	0
-	+	28	0
-	+	29	0
-	+	31	18
-	+	38	18
-	+	45	18
-	+	52	18
-	+	59	18
-	+	66	0
-	+	67	0
-	+	68	0
-	+	69	0
-	+	70	0
-	+	71	0
-	+	73	0
-	+	74	0
-	+	75	0
-	+	76	0
-	+	77	0
-	+	78	0
-	+	79	0
-	+	81	0
-	+	82	0
-	+	83	0
-	+	84	0
-	+	85	0
-	+	86	0
-	+	87	0
-	+	88	0
-	+	89	0
-	+	90	0
-	+	38	0
-	+	39	0
-	+	40	0
-	+	41	0
-	+	42	0
-	+	43	0
-	+	38	35
-	+	52	0
-	+	53	0
-	+	54	0
-	+	55	0
-	+	56	0
-	+	57	0
-	+	31	0
-	+	32	0
-	+	33	0
-	+	34	0
-	+	35	0
-	+	34	0
-	+	35	0
-	+	36	21
-	+	38	0
-	+	50	0
-	+	45	0
-	+	46	0
-	+	47	0
-	+	48	0
-	+	49	0
-	+	64	0
-	+	59	0
-	+	60	0
-	+	61	0
-	+	62	0
-	+	63	0
-	+	45	38
-	+	50	21
-	+	59	50
-	+	64	21
-	+	10	29
-	+	17	29
-	+	24	31
-	+	31	31
-	+	16	0
-	+	13	35
-	+	20	35
-	+	27	37
-	+	34	37
-	+	41	35
-	+	48	35
-	+	55	37
-	+	62	37
-	+	41	30
-	+	48	30
-	+	55	30
-	+	62	30
-
-> ~/project-kali/roles/openvpn/templates/udp2_53.j2
-	"	7	25
-	^	7	26
-	.	7	25
-	+	7	25
-
-> ~/project-kali/roles/openvpn/templates/udp2_2500.j2
-	"	7	27
-	^	7	28
-	.	7	27
-	+	7	27
-
-> ~/project-kali/roles/openvpn/templates/udp1_53.j2
-	"	7	25
-	^	7	26
-	.	7	25
-	+	7	25
-
-> ~/project-kali/roles/openvpn/templates/udp1.j2
-	"	7	27
-	^	7	28
-	.	7	27
-	+	7	27
-
-> ~/Downloads/ShadeYouVPN.com USA-1 Chicago torrent TCP-ShadowMode.ovpn
-	"	20	0
-
-> ~/project-kali/roles/openvpn/templates/tcpShM2.j2
-	"	23	7
-	^	23	8
-	.	21	8
-	+	17	5
-	+	19	9
-	+	21	8
-
-> ~/project-kali/roles/openvpn/templates/udp2.j2
-	"	26	0
-	^	26	0
-	.	23	8
-	+	19	5
-	+	21	9
-	+	23	8
-
-> ~/project-kali/roles/openvpn/templates/tcp2.j2
-	"	23	7
-	^	23	8
-	.	23	8
-	+	19	5
-	+	21	9
-	+	23	8
-
-> ~/project-kali/roles/openvpn/templates/tcpShM.j2
-	"	1	0
-	^	7	29
-	.	39	0
-	+	7	26
-	+	39	0
-	+	7	29
-	+	33	0
-	+	9	0
-	+	39	0
-
-> ~/project-kali/roles/openvpn/templates/tcp.j2
-	"	35	0
-	^	35	0
-	.	34	0
-	+	34	16
-	+	2	0
-	+	4	0
-	+	6	0
-	+	8	0
-	+	10	0
-	+	2	0
-	+	4	0
-	+	6	0
-	+	8	0
-	+	7	28
-	+	3	7
-	+	5	8
-	+	7	27
-	+	34	0
-
-> ~/project-kali/roles/openvpn/templates/udp.j2
-	"	7	26
-	^	7	27
-	.	7	27
-	+	23	17
-	+	1	0
-	+	45	18
-	+	1	6
-	+	3	9
-	+	5	10
-	+	7	25
-	+	9	21
-	+	11	20
-	+	13	6
-	+	15	12
-	+	17	16
-	+	19	12
-	+	21	16
-	+	23	15
-	+	25	18
-	+	27	22
-	+	29	11
-	+	31	11
-	+	33	6
-	+	35	20
-	+	37	17
-	+	39	13
-	+	41	17
-	+	43	7
-	+	45	16
-	+	7	24
-	+	1	1
-	+	7	27
-
-> ~/Downloads/ShadeYouVPN.com USA-3 Los Angeles TCP-ShadowMode.ovpn
-	"	20	0
-
-> ~/Downloads/ShadeYouVPN.com USA-3 Los Angeles TCP-443.ovpn
-	"	38	0
-
-> ~/Downloads/ShadeYouVPN.com USA-3 Los Angeles UDP-53.ovpn
-	"	38	0
-
-> ~/Downloads/ShadeYouVPN.com USA-3 Los Angeles UDP-25000.ovpn
-	"	10	0
-
-> ~/Downloads/ShadeYouVPN.com
-	"	1	0
-
-> ~/project-kali/1.txt
-	"	7	0
-
-> ~/project-kali/roles/tor_kali/vars/main.yml
-	"	13	2
-	^	13	14
-	.	13	13
-	+	11	23
-	+	13	4
-	+	11	0
-	+	4	14
-	+	5	4
-	+	6	5
-	+	7	5
-	+	6	5
-	+	7	5
-	+	13	13
+	+	18	27
+	+	19	27
+	+	20	27
+	+	21	27
+	+	22	29

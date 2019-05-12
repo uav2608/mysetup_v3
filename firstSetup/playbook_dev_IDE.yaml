@@ -3,9 +3,9 @@
   connection: local
   gather_facts: yes
   become: true
-  vars_files:
-    - ~/firstSetup/roles/dev_ide/vars/main.yml
-    - ~/firstSetup/roles/atom_packages/vars/main.yml
+#  vars_files:
+#    - ~/firstSetup/roles/dev_ide/vars/main.yml
+#    - ~/firstSetup/roles/atom_packages/vars/main.yml
 
   roles:
     - dev_ide

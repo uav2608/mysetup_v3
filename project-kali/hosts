@@ -1,6 +1,9 @@
 
 [kali]
-192.168.122.17
+192.168.122.17  ansible_user=john1010
+
+[kali2]
+192.168.122.61  
 
 [centos]
 centos01
