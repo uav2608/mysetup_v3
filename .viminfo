@@ -11,8 +11,8 @@
 ~MSle0~/os_family
 
 # Command Line History (newest to oldest):
-:q!
 :wq
+:q!
 :set number
 :Q!
 :q1
@@ -54,18 +54,20 @@
 	centos
 
 # File marks:
-'0  5  0  ~/firstSetup/playbook_dev.yaml
-'1  8  0  ~/firstSetup/playbook_dev_IDE.yaml
-'2  22  0  ~/firstSetup/playbook_kali.yaml
-'3  1  0  ~/firstSetup/playbook.yaml
-'4  1  7  ~/project-vagrant/VagrantfileOld
-'5  10  0  ~/project-vagrant/Vagrantfile_old
-'6  1  0  ~/project-vagrant/Vagrantfile_vb
-'7  40  0  ~/project-vagrant/VagrantfileDebian
-'8  35  0  ~/project-vagrant/VagrantfileCentos
-'9  13  0  ~/project-vagrant/Vagrantfile
+'0  24  0  ~/.gitignore_global
+'1  5  0  ~/firstSetup/playbook_dev.yaml
+'2  8  0  ~/firstSetup/playbook_dev_IDE.yaml
+'3  22  0  ~/firstSetup/playbook_kali.yaml
+'4  1  0  ~/firstSetup/playbook.yaml
+'5  1  7  ~/project-vagrant/VagrantfileOld
+'6  10  0  ~/project-vagrant/Vagrantfile_old
+'7  1  0  ~/project-vagrant/Vagrantfile_vb
+'8  40  0  ~/project-vagrant/VagrantfileDebian
+'9  35  0  ~/project-vagrant/VagrantfileCentos
 
 # Jumplist (newest first):
+-'  24  0  ~/.gitignore_global
+-'  1  0  ~/.gitignore_global
 -'  5  0  ~/firstSetup/playbook_dev.yaml
 -'  8  0  ~/firstSetup/playbook_dev_IDE.yaml
 -'  1  0  ~/firstSetup/playbook_dev_IDE.yaml
@@ -165,6 +167,9 @@
 -'  1  0  ~/Downloads/ShadeYouVPN.com USA-3 Los Angeles UDP-25000.ovpn
 
 # History of marks within files (newest to oldest):
+
+> ~/.gitignore_global
+	"	24	0
 
 > ~/firstSetup/playbook_dev.yaml
 	"	5	0
@@ -352,108 +357,3 @@
 
 > ~/project-kali/playbook_kali_initial.
 	"	1	0
-
-> ~/project-kali/roles/openvpn/vars/main.yml
-	"	37	2
-	^	22	29
-	.	22	29
-	+	46	0
-	+	47	0
-	+	49	0
-	+	50	0
-	+	51	0
-	+	52	0
-	+	53	0
-	+	54	0
-	+	56	0
-	+	57	0
-	+	58	0
-	+	59	0
-	+	60	0
-	+	61	0
-	+	18	23
-	+	20	23
-	+	21	23
-	+	23	24
-	+	22	26
-	+	23	0
-	+	22	28
-	+	7	0
-	+	16	25
-	+	18	26
-	+	22	32
-	+	23	0
-	+	22	28
-	+	16	24
-	+	18	27
-	+	22	30
-	+	18	17
-	+	20	17
-	+	21	17
-	+	22	17
-	+	22	17
-	+	25	18
-	+	26	17
-	+	18	38
-	+	20	0
-	+	18	36
-	+	47	0
-	+	33	18
-	+	40	13
-	+	47	16
-	+	22	0
-	+	8	10
-	+	13	8
-	+	14	12
-	+	8	3
-	+	18	28
-	+	19	28
-	+	20	28
-	+	21	28
-	+	22	29
-	+	29	4
-	+	36	4
-	+	43	4
-	+	50	3
-	+	57	4
-	+	64	3
-	+	71	4
-	+	78	3
-	+	85	3
-	+	92	3
-	+	99	3
-	+	106	3
-	+	113	3
-	+	120	3
-	+	127	3
-	+	134	3
-	+	141	3
-	+	148	3
-	+	155	3
-	+	162	3
-	+	18	27
-	+	19	27
-	+	20	27
-	+	19	27
-	+	21	27
-	+	22	28
-	+	18	28
-	+	19	28
-	+	20	28
-	+	21	28
-	+	22	29
-	+	18	27
-	+	19	27
-	+	20	26
-	+	21	26
-	+	22	27
-	+	18	28
-	+	19	28
-	+	20	28
-	+	21	28
-	+	22	29
-	+	18	27
-	+	19	27
-	+	20	27
-	+	21	27
-	+	22	29
