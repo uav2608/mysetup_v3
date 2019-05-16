@@ -62,18 +62,20 @@ $
 	f
 
 # File marks:
-'0  24  12  ~/project-flask-react/testdriven-app/playbook-docker-service.yaml
-'1  25  47  ~/project-flask-react/testdriven-app/playbook-docker-service.yaml
-'2  23  11  ~/project-flask-react/testdriven-app/playbook-docker-service.yaml
-'3  1  0  ~/project-flask-react/testdriven-app/roles/flask-app/tasks/main.yml
-'4  44  23  ~/project-flask-react/testdriven-app/roles/flask-app/tasks/main.yml
-'5  19  0  ~/project-flask-react/testdriven-app/packer-flask.json
-'6  2  18  ~/project-flask-react/testdriven-app/users-service/requirements.txt
-'7  20  27  ~/project-flask-react/testdriven-app/packer-flask.json
-'8  22  7  ~/project-flask-react/testdriven-app/packer-flask.json
-'9  30  5  ~/project-flask-react/testdriven-app/packer-flask.json
+'0  19  4  ~/.gitignore_global
+'1  24  12  ~/project-flask-react/testdriven-app/playbook-docker-service.yaml
+'2  25  47  ~/project-flask-react/testdriven-app/playbook-docker-service.yaml
+'3  23  11  ~/project-flask-react/testdriven-app/playbook-docker-service.yaml
+'4  1  0  ~/project-flask-react/testdriven-app/roles/flask-app/tasks/main.yml
+'5  44  23  ~/project-flask-react/testdriven-app/roles/flask-app/tasks/main.yml
+'6  19  0  ~/project-flask-react/testdriven-app/packer-flask.json
+'7  2  18  ~/project-flask-react/testdriven-app/users-service/requirements.txt
+'8  20  27  ~/project-flask-react/testdriven-app/packer-flask.json
+'9  22  7  ~/project-flask-react/testdriven-app/packer-flask.json
 
 # Jumplist (newest first):
+-'  19  4  ~/.gitignore_global
+-'  1  0  ~/.gitignore_global
 -'  24  12  ~/project-flask-react/testdriven-app/playbook-docker-service.yaml
 -'  25  10  ~/project-flask-react/testdriven-app/playbook-docker-service.yaml
 -'  23  4  ~/project-flask-react/testdriven-app/playbook-docker-service.yaml
@@ -173,6 +175,12 @@ $
 -'  64  4  ~/project-flask-react/testdriven-app/roles/flask-app/tasks/main.yml
 
 # History of marks within files (newest to oldest):
+
+> ~/.gitignore_global
+	"	19	4
+	^	19	5
+	.	19	5
+	+	19	5
 
 > ~/project-flask-react/testdriven-app/playbook-docker-service.yaml
 	"	24	12
@@ -631,6 +639,3 @@ $
 	+	6	12
 	+	11	18
 	+	12	19
-
-> ~/project-vagrant/playbook_vagrant.y
-	"	1	0
