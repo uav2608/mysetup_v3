@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: yes
+  become: yes
+  tasks:
+  - name: Run the role in the Container
+    import_role: 
+      name: flask-app
+

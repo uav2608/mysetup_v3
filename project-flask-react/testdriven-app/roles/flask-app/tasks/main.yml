@@ -1,0 +1,70 @@
+---
+# tasks file for flask-app
+
+- block:
+
+  - name: Install Epel-repository
+    yum:
+      name: epel-release
+      state: present
+
+  - name: Install pip
+    yum:
+      name: python-pip
+      state: present
+
+  when: ansible_facts['os_family'] == "RedHat"
+
+- block:
+
+  - name: Install pip
+    apt:
+      name: python-pip
+      state: present
+
+  when: ansible_facts['os_family'] == "Debian"
+
+- name: Create WORKDIR
+  file:
+    path: /usr/src/app
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Copy files to /usr/src/app
+  copy:
+    src: /home/{{project_path}}/requirements.txt
+    dest: /usr/src/app/
+    owner: root
+    group: root
+    mode: 0664
+
+- name: Install flask packages
+  shell: pip3 install -r /usr/src/app/requirements.txt
+
+- name: Copy file to /usr/src/app
+  copy:
+    src: /home/{{project_path}}/manage.py
+    dest: /usr/src/app/
+    owner: root
+    group: root
+    mode: 0664
+
+- name: Copy files to /usr/src/app/project
+  copy:
+    src: /home/{{project_path}}/project
+    dest: /usr/src/app/
+    owner: root
+    group: root
+    mode: 0664
+
+#- name: check if file exists
+#  stat:
+#    path: /usr/src/app/requirements.txt
+#  register: file1
+
+#- debug:
+#    msg: "{{file1}}"
+
+

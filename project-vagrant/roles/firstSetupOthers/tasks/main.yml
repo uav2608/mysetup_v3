@@ -1,0 +1,111 @@
+---
+# tasks file for firstSetupOthers
+
+- block:
+  - name: Make sure to have Wheel group
+    group:
+      name: wheel
+      state: present
+
+  - name: Add new nonpriv user and add to wheel group
+    user:
+      name: "{{ nonpriv_user }}"
+      password: "$6$u6D3wpdYvxc3W47q$ZaNGMieaO6gA5SEOIxEEXMIEadXiHB4XBBfyrzjlxmmgNUCSg9Zgs3SU6Gv3.3AobS8NLxSPyVODhAeau3ZP40"
+      shell: /bin/bash
+      groups: wheel
+      state: present
+      
+  - name: Update sudoer file
+    lineinfile:
+      path: /etc/sudoers
+      state: present
+      regexp: '^%sudo\s'
+      line: '%wheel ALL=(ALL) NOPASSWD: ALL'
+      validate: '/usr/sbin/visudo -cf %s'
+
+  - name: create a .ssh directory if it doesn't exist
+    file:
+      path:  /home/{{ nonpriv_user }}/.ssh
+      state: directory
+      owner: "{{ nonpriv_user }}"
+      group: "{{ nonpriv_user }}"
+      mode: 0700
+
+  - name: Set authorized keys taken from file
+    authorized_key:
+      user: "{{ nonpriv_user }}"
+      state: present
+      key: "{{ lookup('file', '/home/{{main_user}}/.ssh/id_rsa.pub' ) }}"
+
+  - name: Setup networking (resolv.conf)
+    template: owner=root group=root mode=644 
+      src=resolv.j2 
+      dest=/etc/resolv.conf
+
+  - name: Setup networking (interfaces)
+    template: owner=root group=root mode=644 
+      src=interface.j2 
+      dest=/etc/sysconfig/network-scripts/ifcfg-eth0
+
+  - name: Enable SSH
+    service:
+      name: sshd
+      enabled: yes
+
+  when: ansible_facts['os_family'] == "RedHat"
+
+- block:
+  - name: Make sure to have Sudo group
+    group:
+      name: sudo
+      state: present
+
+  - name: Add new nonpriv user and add to sudo group
+    user:
+      name: "{{ nonpriv_user }}"
+      password: "$6$u6D3wpdYvxc3W47q$ZaNGMieaO6gA5SEOIxEEXMIEadXiHB4XBBfyrzjlxmmgNUCSg9Zgs3SU6Gv3.3AobS8NLxSPyVODhAeau3ZP40"
+      shell: /bin/bash
+      groups: sudo
+      state: present
+
+  - name: Update sudoer file
+    lineinfile:
+      path: /etc/sudoers
+      state: present
+      regexp: '^%sudo\s'
+      line: '%sudo ALL=(ALL) NOPASSWD: ALL'
+      validate: '/usr/sbin/visudo -cf %s'
+
+  - name: create a .ssh directory if it doesn't exist
+    file:
+      path:  /home/{{ nonpriv_user }}/.ssh
+      state: directory
+      owner: "{{ nonpriv_user }}"
+      group: "{{ nonpriv_user }}"
+      mode: 0700
+
+  - name: Set authorized keys taken from file
+    authorized_key:
+      user: "{{ nonpriv_user }}"
+      state: present
+      key: "{{ lookup('file', '/home/{{main_user}}/.ssh/id_rsa.pub' ) }}"
+
+  - name: Setup networking (resolv.conf)
+    template: owner=root group=root mode=644
+      src=resolv.j2
+      dest=/etc/resolv.conf
+
+  - name: Setup networking (interfaces)
+    template: owner=root group=root mode=644
+      src=interface.j2
+      dest=/etc/network/interfaces
+
+  - name: Enable SSH
+    service:
+      name: ssh
+      enabled: yes
+
+
+  when: ansible_facts['os_family'] == "Debian"
+ 
+

@@ -3,10 +3,10 @@
 
 VAGRANTFILE_API_VERSION = "2"
 	
-numserverscentos = ENV['numserverscentos'] || "2"
+numserverscentos = ENV['numserverscentos'] || "1"
 numserverscentos = numserverscentos.to_i
 
-numserversdebian = ENV['numserversdebian'] || "2"
+numserversdebian = ENV['numserversdebian'] || "1"
 numserversdebian = numserversdebian.to_i
 
 serverscentos = Hash.new
@@ -38,9 +38,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         svr1.vm.hostname = servernamecentos
         svr1.vm.network "private_network", ip: serverscentos [servernamecentos][:ip]
         svr1.vm.provision "shell",
-          inline: "sudo yum update && sudo yum install -y python"
+          inline: "sudo yum update -y && sudo yum install -y python"
         svr1.vm.provision "ansible" do |ansible|
-          ansible.playbook = "playbook_centos.yaml"
+          ansible.playbook = "playbook_vagrant.yaml"
+          ansible.verbose = true
+          ansible.raw_arguments = ["--vault-id", "vault_pass"]
           ansible.extra_vars = {
             serverscentos: serverscentos
           }
@@ -57,9 +59,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         svr2.vm.hostname = servernamedebian
         svr2.vm.network "private_network", ip: serversdebian [servernamedebian][:ip]
         svr2.vm.provision "shell",
-          inline: "sudo apt-get update && sudo apt install -y python"
+          inline: "sudo apt-get update -y && sudo apt install -y python"
         svr2.vm.provision "ansible" do |ansible|
-          ansible.playbook = "playbook_debian.yaml"
+          ansible.playbook = "playbook_vagrant.yaml"
+          ansible.verbose = true
+          ansible.raw_arguments = ["--vault-id", "vault_pass"]
           ansible.extra_vars = {
             serversdebian: serversdebian
           }

@@ -1,0 +1,27 @@
+---
+# tasks file for python3.6
+
+#- name: Add python3 repository
+#  become: yes
+#  yum_repository:
+#    name: IUS repository
+#    baseurl: https://centos7.iuscommunity.org/ius-release.rpm
+#    description: IUS repository
+#    state: absent
+
+#- name: Add python3 repository
+#  become: yes
+#  yum:
+#    name: https://centos7.iuscommunity.org/ius-release.rpm
+#    state: present
+
+- name: Install Python3.6
+  become: yes
+  yum:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - python36
+    - python36-pip
+    - python36-devel
+    - python36-setuptools

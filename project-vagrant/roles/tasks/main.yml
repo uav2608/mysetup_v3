@@ -1,8 +1,0 @@
----
-- name: install flask with pip
-  pip:
-    name: flask
-    version: '{{flask_ver}}'
-    state: present
-    editable: false
-

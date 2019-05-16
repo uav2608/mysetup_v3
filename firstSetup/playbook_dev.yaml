@@ -4,6 +4,7 @@
   gather_facts: no
 
   roles:
-    - dev_ide
-    - atom_packages
-
+#    - dev_ide
+#    - atom_packages
+#    - npm-react
+    - python3.6   

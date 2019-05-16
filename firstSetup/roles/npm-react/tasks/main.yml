@@ -1,0 +1,37 @@
+---
+# tasks file for npm-react
+
+- name: Add NPM respository
+  become: yes
+  get_url: 
+    url: https://rpm.nodesource.com/setup_10.x 
+    dest: /home/{{ansible_user}}
+    mode: 0755
+
+- name: Run NPM repository script
+  become: yes
+  shell: bash /home/{{ansible_user}}/setup_10.x
+
+#- name: Install repository 1
+#  become: yes
+#  yum_repository:
+#    name: nodejs
+#    baseurl: "https://rpm.nodesource.com/pub_10.x/el/$releasever/$basearch/"
+#    description: Nodeja packages
+#    state: absent
+#    gpgcheck: no
+
+- name: Install NPM
+  become: yes
+  yum:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - nodejs
+ 
+- name: install React
+  become: yes
+  npm:
+    name: create-react-app
+    global: yes  
+

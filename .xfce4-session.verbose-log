@@ -126,4 +126,35 @@ TRACE[xfsm-manager.c:1295] xfsm_manager_save_yourself_done(): enteringTRACE[xfsm
 TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (CloneCommand)
 TRACE[sm-layer.c:304] sm_save_yourself_done(): Client Id = 210dd3bac-a088-439b-9eee-b357a7e61325, received SAVE YOURSELF DONE [Success = True]
 
-TRACE[xfsm-manager.c:1295] xfsm_manager_save_yourself_done(): entering
+TRACE[xfsm-manager.c:1295] xfsm_manager_save_yourself_done(): enteringTRACE[sm-layer.c:162] sm_new_client(): ICE connection fd = 18, received NEW CLIENT
+
+TRACE[sm-layer.c:213] sm_register_client(): ICE connection fd = 18, received REGISTER CLIENT [Previous Id = None]
+
+TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (RestartCommand)
+TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (CloneCommand)
+TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (Program, firefox)
+TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (UserID, ansibleuser1)
+TRACE[sm-layer.c:304] sm_save_yourself_done(): Client Id = 27b1a20ea-bc39-4729-8661-00c82bf7e3bb, received SAVE YOURSELF DONE [Success = True]
+
+TRACE[xfsm-manager.c:1295] xfsm_manager_save_yourself_done(): enteringTRACE[sm-layer.c:162] sm_new_client(): ICE connection fd = 19, received NEW CLIENT
+
+TRACE[sm-layer.c:213] sm_register_client(): ICE connection fd = 19, received REGISTER CLIENT [Previous Id = None]
+
+TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (RestartCommand)
+TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (CloneCommand)
+TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (Program, firefox)
+TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (UserID, ansibleuser1)
+TRACE[sm-layer.c:162] sm_new_client(): ICE connection fd = 20, received NEW CLIENT
+
+TRACE[sm-layer.c:213] sm_register_client(): ICE connection fd = 20, received REGISTER CLIENT [Previous Id = None]
+
+TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (RestartCommand)
+TRACE[xfsm-properties.c:629] xfsm_properties_set_from_smprop(): -> Set strv (CloneCommand)
+TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (Program, firefox)
+TRACE[xfsm-properties.c:489] xfsm_properties_set_string(): -> Set string (UserID, ansibleuser1)
+TRACE[sm-layer.c:304] sm_save_yourself_done(): Client Id = 24e1ceb16-8f7a-4ef7-b9c3-14147a839fa5, received SAVE YOURSELF DONE [Success = True]
+
+TRACE[xfsm-manager.c:1295] xfsm_manager_save_yourself_done(): enteringTRACE[sm-layer.c:304] sm_save_yourself_done(): Client Id = 2d57efc1f-ef6b-4e46-bded-b0620bf7763d, received SAVE YOURSELF DONE [Success = True]
+
+TRACE[xfsm-manager.c:1295] xfsm_manager_save_yourself_done(): enteringTRACE[xfsm-manager.c:428] xfsm_manager_handle_failed_properties(): Client Id 2d57efc1f-ef6b-4e46-bded-b0620bf7763d exited, removing from session.
+TRACE[xfsm-manager.c:428] xfsm_manager_handle_failed_properties(): Client Id 24e1ceb16-8f7a-4ef7-b9c3-14147a839fa5 exited, removing from session.

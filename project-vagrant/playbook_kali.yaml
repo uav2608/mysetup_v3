@@ -1,5 +1,0 @@
----
-- hosts: kali
-  become: true
-#  roles:
-#    - andrewrothstein.flask
