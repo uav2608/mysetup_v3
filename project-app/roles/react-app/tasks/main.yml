@@ -1,0 +1,53 @@
+---
+# tasks file for react-app
+
+- name: Create WORKDIR
+  file:
+    path: /usr/src/app
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+
+- block:
+
+  - name: Install rsync and sudo
+    apt:
+      name: "{{item}}"
+      state: present
+    loop:
+      - rsync
+      - sudo
+
+  when: ansible_facts['os_family'] == "Debian"
+
+
+- block:
+
+  - name: Install rsync and sudo
+    yum:
+      name: "{{item}}"
+      state: present
+    loop:
+      - rsync
+      - sudo
+
+  when: ansible_facts['os_family'] == "RedHat"
+
+
+- name: NPM install
+  shell: npm install --silent
+
+- name: NPM install react-scripts
+  shell: npm install react-scripts -g --silent
+
+- debug:
+    msg: /{{base_path}}/{{development_path}}/{{react_project_path}}/
+
+- name: Copy files to /usr/scr/app
+  synchronize:
+    src: /{{base_path}}/{{development_path}}/{{react_project_path}}/
+    dest: /usr/src/app/
+    rsync_opts:
+      - "--exclude=node_modules"
+

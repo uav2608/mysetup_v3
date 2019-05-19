@@ -18,6 +18,7 @@
 vault_pass
 lib/*
 
+
 # Packages #
 ############
 # it's better to unpack these files and commit the raw source
@@ -92,6 +93,25 @@ Thumbs.db
 npm-debug.log*
 __pycache__
 env/*
+
+#additionals
+.xinitrc
+.xfce4-session.verbose-log
+.viminfo
+.gitconfig
+.esd_auth
+.bash_logout
+.bash_history
+.ansible_galaxy
+.ICEauthority
+.vim/*
+.pk/nssbd/*
+.packer.d/*
+.npm/*
+.local/share/*
+.gem/specs/*
+.dbus/session-bus/*
+.config/*
 
 # ... but the following
 !/.profile

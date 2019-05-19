@@ -1,0 +1,14 @@
+---
+base_path           : home/ansibleuser1/project-app
+development_path    : 1development/projects
+testing_path        : 2testing/projects
+staging_path        : 3staging/projects
+production_path     : 4production/projects
+
+#Flask
+flask_image         : 'uav2608/flask:0.0.1'
+flask_project_path  : users-service
+
+#React
+react_image         : 'uav2608/react:0.0.1'
+react_project_path  : counter-app

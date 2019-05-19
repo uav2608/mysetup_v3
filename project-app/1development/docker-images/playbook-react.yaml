@@ -1,0 +1,16 @@
+---
+- hosts: all
+  gather_facts: yes
+  become: yes
+  vars_files:
+    - ../../group_vars/all/vars.yaml
+
+  roles:
+    - ../../roles/npm
+    - ../../roles/react-app
+  
+#  tasks: 
+#  - import_role:
+#       name: ../../roles/react-app
+
+

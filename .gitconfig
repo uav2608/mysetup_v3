@@ -1,5 +1,0 @@
-[core]
-	excludesfile = /home/ansibleuser1/.gitignore_global
-[user]
-	email = uav2608@gmail.com
-	name = uav2608
