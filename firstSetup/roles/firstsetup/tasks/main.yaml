@@ -1,13 +1,49 @@
 ---
-- name: Make sure to have Wheel group
-  group:
+
+- block:
+  - name: Make sure to have Wheel group
+    group:
       name: wheel
       state: present
 
-- name: Add user to Wheel group
-  user:
+  - name: Add user to Wheel group
+    user:
       name: "{{ ansible_user }}"
       groups: wheel
+
+  - name: Update sudoer file
+    lineinfile:
+      path: /etc/sudoers
+      state: present
+      regexp: '^%wheel\s'
+      line: '%wheel ALL=(ALL) NOPASSWD: ALL'
+      validate: '/usr/sbin/visudo -cf %s'
+
+  when: ansible_os_family == 'RedHat'
+
+
+- block:
+
+  - name: Make sure to have Sudo group
+    group:
+      name: sudo
+      state: present
+
+  - name: Add user to Sudo group
+    user:
+      name: "{{ ansible_user }}"
+      groups: sudo
+
+  - name: Update sudoer file
+    lineinfile:
+      path: /etc/sudoers
+      state: present
+      regexp: '^%sudo\s'
+      line: '%sudo ALL=(ALL) NOPASSWD: ALL'
+      validate: '/usr/sbin/visudo -cf %s'
+
+  when: ansible_os_family == 'Debian'
+
 
 - name: Create a 2048-bit SSH key for user (ansible_user)
   user:
@@ -15,14 +51,6 @@
       generate_ssh_key: yes
       ssh_key_bits: 2048
       ssh_key_file: .ssh/id_rsa
-
-- name: Update sudoer file
-  lineinfile:
-      path: /etc/sudoers
-      state: present
-      regexp: '^%wheel\s'
-      line: '%wheel ALL=(ALL) NOPASSWD: ALL'
-      validate: '/usr/sbin/visudo -cf %s'
 
 - name: create a .ssh directory if it doesn't exist
   file:
@@ -45,32 +73,4 @@
       path: /home/{{ ansible_user }}/.ssh/authorized_keys
       state: present
       line: "{{ auth_key_initial }}"
-
-#- name: create file
-#  file:
-#      path: /etc/sysconfig/network-scripts/ifcfg-ens37
-#      state: touch
-#      owner: root
-#      group: root
-#      mode: 0644
-#      modification_time: "preserve"
-#      access_time: "preserve"
-
-#- name: Make network interface up
-#  net_interface:
-#      name: ifcfg-ens37
-#      enabled: True 
-
-#- name: Assign static IP
-#  template:
-#      src: static_ip
-#      dest: /etc/sysconfig/network-scripts/ifcfg-ens37
-#      owner: root
-#      group: root
-#      mode: 0644
-
-#- name: Restart network
-#  service:
-#     name: network
-#     state: restarted
 

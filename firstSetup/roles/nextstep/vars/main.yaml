@@ -1,6 +1,6 @@
 ---
 # Group vars: packages
-initial_packages: 
+initial_packages_centos: 
   - nfs* 
   - vim
   - net-tools 
@@ -26,3 +26,29 @@ initial_packages:
   - tree
   - device-mapper-persistent-data 
   - lvm2
+
+initial_packages_debian:
+  - nfs*
+  - vim
+  - net-tools
+  - wget
+  - p7zip
+  - bzip2
+  - unar
+  - htop
+  - rsync
+  - nmap
+  - openssh
+  - openssh-clients
+  - openssl-libs
+  - chrony
+  - kexec-tools
+  - inxi
+  - nfs4-acl-tools
+  - acl
+  - git
+  - unzip
+  - tree
+  - device-mapper-persistent-data
+  - lvm2
+

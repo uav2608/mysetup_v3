@@ -1,0 +1,8 @@
+{
+  "MYIMAGE"	: "centos:7.6.1810",
+  "WORKDIR"	: "WORKDIR /usr/src/app",
+  "CMD"		: "CMD [\"python3\", \"manage.py\", \"runserver\", \"-h\", \"0.0.0.0\"]",
+  "FILENAME"	: "playbook-flask.yaml",
+  "IMAGENAME"	: "uav2608/flask1",
+  "MYTAG"	: "0.0.2"
+}

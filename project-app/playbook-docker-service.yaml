@@ -1,0 +1,17 @@
+---
+- name: Run using a project directory
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  roles:
+    - react-compose
+#    - flask-service
+
+
+#  vars_files:
+#     - ../group_vars/all/vars.yaml
+#  tasks:
+#    - import_tasks: ./docker-services/flask_service.yaml
+#    - import_tasks: ./docker-services/react_service.yaml    
+
+

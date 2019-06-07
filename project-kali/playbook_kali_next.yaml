@@ -1,5 +1,4 @@
 ---
-
 - hosts: kali2
   gather_facts: no
   remote_user: john1010

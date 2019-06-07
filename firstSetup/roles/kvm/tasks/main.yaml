@@ -1,9 +1,25 @@
 ---
-- name: Install Packages
-  yum:
+- block:
+
+  - name: Install Packages
+    yum:
       name: "{{ item }}"
       state: present
-  loop: "{{ kvm_packages1 }}"
+    loop: "{{ kvm_packages1 }}"
+
+  when: ansible_os_family == "RedHat"
+
+
+- block:
+
+  - name: Install Packages
+    apt:
+      name: "{{ item }}"
+      state: present
+    loop: "{{ kvm_packages1 }}"
+
+  when: ansible_os_family == "Debian"
+
 
 - name: enable and start libvirtd
   systemd:
@@ -30,5 +46,6 @@
   get_url: 
       url: "{{ item }}"
       dest: ~/ISO/
+      mode: '0666'
   loop: "{{ kvm_packages2 }}" 
 

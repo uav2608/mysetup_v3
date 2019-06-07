@@ -3,11 +3,15 @@
 
 - name: Create WORKDIR
   file:
-    path: /usr/src/app
+    path: "{{item}}"
     state: directory
     owner: root
     group: root
-    mode: 0755
+    mode: 0775
+  loop: 
+    - usr/src/app
+    - usr/src/app/src
+    - usr/src/app/public
 
 - block:
 
@@ -34,6 +38,12 @@
 
   when: ansible_facts['os_family'] == "RedHat"
 
+- name: Copy files to /usr/scr/app
+  synchronize:
+    src: /{{base_path}}/{{development_path}}/{{react_project_path}}/
+    dest: /usr/src/app/
+    rsync_opts:
+      - "--exclude=node_modules"
 
 - name: NPM install
   shell: npm install --silent
@@ -44,10 +54,66 @@
 - debug:
     msg: /{{base_path}}/{{development_path}}/{{react_project_path}}/
 
-- name: Copy files to /usr/scr/app
-  synchronize:
-    src: /{{base_path}}/{{development_path}}/{{react_project_path}}/
-    dest: /usr/src/app/
-    rsync_opts:
-      - "--exclude=node_modules"
+
+#- name: NPM install create-react-app
+#  shell: cd /usr/src/app && npm install create-react-app -g
+
+#- name: create-react-app [project]
+#  shell: cd /usr/src/app && create-react-app {{react_pp}}
+
+#- name: template file to package.json
+#  template:
+#    src: package.j2
+#    dest: /usr/src/app/package.json
+#    owner: root
+#    group: root
+#    mode: '0664'
+
+#- name: template file to package-lock.json
+#  template:
+#    src: package-lock.j2
+#    dest: /usr/src/app/package-lock.json
+#    owner: root
+#    group: root
+#    mode: '0664'
+
+#- name: template file to manifest.json
+#  template:
+#    src: manifest.j2
+#    dest: /usr/src/app/public/manifest.json
+#    owner: root
+#    group: root
+#    mode: '0664'
+
+#- name: template file to index.html
+#  template:
+#    src: indexhtml.j2
+#    dest: /usr/src/app/public/index.html
+#    owner: root
+#    group: root
+#    mode: '0664'
+
+#- name: template file to index.js
+#  template:
+#    src: index.j2
+#    dest: /usr/src/app/src/index.js
+#    owner: root
+#    group: root
+#    mode: '0664'
+
+#- name: NPM install
+#  shell: cd /usr/src/app && npm install --silent
+
+#- name: NPM install react-scripts
+#  shell: npm install react-scripts -g --silent
+
+#- debug:
+#    msg: /{{base_path}}/{{development_path}}/{{react_project_path}}/
+
+#- name: Copy files to /usr/scr/app
+#  synchronize:
+#    src: /{{base_path}}/{{development_path}}/{{react_project_path}}/
+#    dest: /usr/src/app/
+#    rsync_opts:
+#      - "--exclude=node_modules"
 

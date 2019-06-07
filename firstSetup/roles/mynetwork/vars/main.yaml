@@ -1,3 +1,6 @@
 ---
-env:
-  RUNLEVEL: 1
+interface_device_name   : "{{ ansible_interfaces | select('match', '^(eth|enp)') | list | join('\n') }}" 
+temp_addr               : "{{ ansible_all_ipv4_addresses | select('match', '^(192)' ) | list | join('\n') }}/24"
+static_ip_addr               : "{{ temp_addr | ipaddr('last_usable') }}"
+static_gateway          : "{{ temp_addr | ipaddr('first_usable') }} "
+static_ip1              : "{{ temp_addr | ipaddr('-1') }}"

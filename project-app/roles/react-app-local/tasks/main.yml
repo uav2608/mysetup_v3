@@ -1,0 +1,59 @@
+---
+# tasks file for react-app
+
+- name: Create WORKDIR
+  file:
+    path: "{{item}}"
+    state: directory
+    owner: root
+    group: root
+    mode: 0775
+  loop: 
+    - /{{base_path}}/{{development_path}}/{{react_project_path}}
+    - /{{base_path}}/{{development_path}}/{{react_project_path}}/src
+    - /{{base_path}}/{{development_path}}/{{react_project_path}}/public
+
+- name: template file to package.json
+  template:
+    src: package.j2
+    dest: /{{base_path}}/{{development_path}}/{{react_project_path}}/package.json
+    owner: root
+    group: root
+    mode: '0664'
+
+- name: template file to package-lock.json
+  template:
+    src: package-lock.j2
+    dest: /{{base_path}}/{{development_path}}/{{react_project_path}}/package-lock.json
+    owner: root
+    group: root
+    mode: '0664'
+
+- name: template file to manifest.json
+  template:
+    src: manifest.j2
+    dest: /{{base_path}}/{{development_path}}/{{react_project_path}}/public/manifest.json
+    owner: root
+    group: root
+    mode: '0664'
+
+- name: template file to index.html
+  template:
+    src: indexhtml.j2
+    dest: /{{base_path}}/{{development_path}}/{{react_project_path}}/public/index.html
+    owner: root
+    group: root
+    mode: '0664'
+
+- name: template file to index.js
+  template:
+    src: index.j2
+    dest: /{{base_path}}/{{development_path}}/{{react_project_path}}/src/index.js
+    owner: root
+    group: root
+    mode: '0664'
+
+- name: Unarchive node_modules
+  unarchive:
+    src: node_modules.tgz
+    dest: /{{base_path}}/{{development_path}}/{{react_project_path}}/

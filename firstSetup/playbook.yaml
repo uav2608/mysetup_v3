@@ -2,31 +2,25 @@
 - hosts: 127.0.0.1
   connection: local
   gather_facts: yes
-#  remote_user: root
   become: true
   become_method: su
   become_user: root
   roles:
     - firstsetup
 
-
 - hosts: 127.0.0.1
   connection: local
   gather_facts: yes
   become: true
-#  become_method: su
-#  become_user: root
   vars:
     linux_desktop: xfce
-#  vars_files:
-#    - ~/firstSetup/roles/nextstep/vars/main.yaml
-#    - ~/firstSetup/roles/packer_docker/vars/main.yaml
-#    - ~/firstSetup/roles/vboxguest/vars/main.yml
-#    - ~/firstSetup/roles/vagrant/vars/main.yaml
 
   roles:
+    - mynetwork
     - nextstep
-    - packer_docker
+    - packer
+    - docker
+    - pip
     - linux_desktop
     - vagrant
     - kvm   

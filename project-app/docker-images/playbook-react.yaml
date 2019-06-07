@@ -1,0 +1,21 @@
+---
+- hosts: localhost
+  gather_facts: no
+  become: yes
+  vars_files:
+    - ../group_vars/all/vars.yaml
+  roles:
+    - ../roles/react-app-local
+
+
+- hosts: all
+  gather_facts: yes
+  become: yes
+  vars_files:
+    - ../group_vars/all/vars.yaml
+
+  roles:
+    - ../roles/npm
+    - ../roles/react-app
+  
+
