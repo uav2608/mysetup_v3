@@ -1,4 +1,0 @@
----
-# Vagrant and Packer packages
-#vagrant_packages: ['qemu', 'libvirt', 'libvirt-devel', 'ruby-devel', 'gcc', 'qemu-kvm']
-

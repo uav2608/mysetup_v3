@@ -17,7 +17,14 @@
 .xfce4-session.verbose-log.last
 vault_pass
 lib/*
-
+.atom/*
+.gem/*
+.gnupg/*
+.java/*
+.mozilla/*
+.npm/*
+.PyCharm2019.1/*
+.WebStorm2019.1/*
 
 # Packages #
 ############
