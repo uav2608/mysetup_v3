@@ -6,7 +6,7 @@
   become_method: su
   become_user: root
   roles:
-#    - firstsetup
+    - firstsetup
 
 - hosts: 127.0.0.1
   connection: local
@@ -16,15 +16,15 @@
     linux_desktop: xfce
 
   roles:
-#    - nextstep
-#    - packer
-#    - docker
-#    - python3
-#    - pip
+    - nextstep
+    - packer
+    - docker
+    - python3
+    - pip
     - mynetwork
-#    - linux_desktop
-#    - vagrant
-#    - kvm   
+    - linux_desktop
+    - vagrant
+    - kvm   
 
   tasks:
 
