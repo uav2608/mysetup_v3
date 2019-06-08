@@ -73,23 +73,23 @@
   when: make_results is success
 
 
-- block:
-  - name: uninstall deps for building {{ compiled_python_dist_name }}
-    yum:
-      name: "{{ item }}"
-      state: absent
-    loop: "{{ compiled_python3_centos7_deps }}"
-    ignore_errors: True
-  when: ansible_os_family == "RedHat"
+#- block:
+#  - name: uninstall deps for building {{ compiled_python_dist_name }}
+#    yum:
+#      name: "{{ item }}"
+#      state: absent
+#    loop: "{{ compiled_python3_centos7_deps }}"
+#    ignore_errors: True
+#  when: ansible_os_family == "RedHat"
 
-- block:
-  - name: uninstall deps for building {{ compiled_python_dist_name }}
-    apt:
-      name: "{{ item }}"
-      state: absent
-    loop: "{{ compiled_python3_debian_deps }}"
-    ignore_errors: True
-  when: ansible_os_family == "Debian"
+#- block:
+#  - name: uninstall deps for building {{ compiled_python_dist_name }}
+#    apt:
+#      name: "{{ item }}"
+#      state: absent
+#    loop: "{{ compiled_python3_debian_deps }}"
+#    ignore_errors: True
+#  when: ansible_os_family == "Debian"
 
 
 - name: testing for built {{ compiled_python_dist_name }}

@@ -6,7 +6,7 @@
     owner: root
     group: root
     mode: 0644
-  notify: Reboot network
+#  notify: Reboot network
   when: ansible_os_family == 'RedHat' 
 
 - name: Create static IP for Debian
@@ -16,7 +16,7 @@
     owner: root
     group: root
     mode: 0644
-  notify: Reboot networking
+#  notify: Reboot networking
   when: ansible_os_family == 'Debian' 
 
 - name: Enable the "network" service
