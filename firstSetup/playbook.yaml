@@ -16,11 +16,11 @@
     linux_desktop: xfce
 
   roles:
-    - mynetwork
     - nextstep
     - packer
     - docker
     - pip
+    - mynetwork
     - linux_desktop
     - vagrant
     - kvm   

@@ -26,6 +26,7 @@ initial_packages_centos:
   - tree
   - device-mapper-persistent-data 
   - lvm2
+  - python-netaddr
 
 initial_packages_debian:
   - nfs*
@@ -51,4 +52,4 @@ initial_packages_debian:
   - tree
   - device-mapper-persistent-data
   - lvm2
-
+  - python-netaddr
