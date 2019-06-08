@@ -79,3 +79,9 @@
       state: present
       line: "{{ auth_key_initial }}"
 
+- name: Copy authorized_keys
+  lineinfile:
+      path: /home/{{ current_user }}/.ssh/authorized_keys
+      state: present
+      line: "{{ auth_key_second }}"
+

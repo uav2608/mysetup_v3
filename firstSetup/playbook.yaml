@@ -12,8 +12,6 @@
   connection: local
   gather_facts: yes
   become: true
-  vars:
-    linux_desktop: xfce
 
   roles:
     - nextstep
@@ -21,8 +19,12 @@
     - docker
     - python3
     - pip
-    - mynetwork
-    - linux_desktop
+    - role: mynetwork
+      vars:
+        temp_addr: 192.168.1.1/24
+    - role: linux_desktop
+      vars:
+        linux_desktop: xfce
     - vagrant
     - kvm   
 
