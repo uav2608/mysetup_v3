@@ -62,8 +62,8 @@
     debug:
       msg: "{{ vagrant_info.stdout }}"
 
-  - name: debuging python
-    shell: python3 --version  
+  - name: debuging python3
+    shell: python3.7 --version  
     register: python3_info
 
   - name: python3-info
@@ -71,7 +71,7 @@
       msg: "{{ python3_info.stdout }}"
 
   - name: debuging pip3
-    shell: pip3 --version
+    shell: pip3.7 --version
     register: pip3_info
 
   - name: pip3-info
